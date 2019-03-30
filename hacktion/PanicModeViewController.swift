@@ -11,17 +11,19 @@ import UIKit
 class PanicModeViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var answersStackView: UIStackView!
   
   private let myMessageIdentifier = "MyMessageTableViewCell"
   private let chatbotMessageIdentifier = "ChatbotMessageTableViewCell"
   
-  private let messages: [Message] = [
-    Message(text: "😱  Ooops...", sender: .me),
-    Message(text: "Hey Lola ! Don’t panic ! 😊 I will get you through the different steps", sender: .chatbot),
-    Message(text: "First of all, you confirm that you are taking the Yasmin combined contraceptive pill ?", sender: .chatbot)
+  private var messages: [Message] = [
+    Message(text: "😱  Ooops...", sender: .me, possibleAnswers: nil),
+    Message(text: "Hey Lola ! Don’t panic ! 😊 I will get you through the different steps", sender: .chatbot, possibleAnswers: nil),
+    Message(text: "First of all, you confirm that you are taking the Yasmin combined contraceptive pill ?", sender: .chatbot, possibleAnswers: ["Yes", "No"])
   ]
   
   private var lastMessageIndex = 0
+  private var animationDelay = 0.0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,6 +32,36 @@ class PanicModeViewController: UIViewController {
     tableView.register(UINib(nibName: chatbotMessageIdentifier, bundle: nil), forCellReuseIdentifier: chatbotMessageIdentifier)
     tableView.estimatedRowHeight = 60
     tableView.rowHeight = UITableView.automaticDimension
+    
+    answersStackView.isHidden = true
+  }
+  
+  private func displayPossibleAnswersForMessage(at index: Int) {
+    guard let answers = messages[index].possibleAnswers else {
+      return
+    }
+    // TODO: remove all stack subviews
+    answers.forEach { answer in
+      let button = UIButton(frame: CGRect(x: 0, y: 0, width: answersStackView.bounds.width, height: answersStackView.bounds.height))
+      button.setTitle(answer, for: .normal)
+      button.setTitleColor(.white, for: .normal)
+      button.backgroundColor = UIColor(red: 255/255, green: 113/255, blue: 60/255, alpha: 1)
+      button.titleLabel?.font = UIFont(name: "Nunito-Bold", size: 15)
+      button.layer.cornerRadius = 8
+      button.addTarget(self, action: #selector(answerQuestion(_:)), for: .touchUpInside)
+      answersStackView.addArrangedSubview(button)
+    }
+    answersStackView.isHidden = false
+  }
+  
+  @objc private func answerQuestion(_ sender: UIButton) {
+    answersStackView.isHidden = true
+    guard let answer = sender.titleLabel?.text else {
+      return
+    }
+    messages.append(Message(text: answer, sender: .me, possibleAnswers: nil))
+    tableView.insertRows(at: [IndexPath(row: lastMessageIndex + 1, section: 0)], with: .automatic)
+    // TODO: update lastMessageIndex
   }
   
   @IBAction func close() {
@@ -70,10 +102,14 @@ extension PanicModeViewController: UITableViewDelegate {
 
     UIView.animate(
       withDuration: 1,
-      delay: 0.5 * Double(indexPath.row),
+      delay: 0.5 * animationDelay,
       options: [.curveEaseInOut],
       animations: {
+        self.animationDelay = Double(indexPath.row)
         cell.transform = CGAffineTransform(translationX: 0, y: 0)
+    }, completion: { _ in
+      self.animationDelay = 0.0
+      self.displayPossibleAnswersForMessage(at: indexPath.row)
     })
     
     if (lastMessageIndex < indexPath.row) {

@@ -170,10 +170,10 @@
                                     <outlet property="delegate" destination="RtR-ji-Ul5" id="zuz-nf-xUJ"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-Qr-RMd">
-                                <rect key="frame" x="0.0" y="593" width="375" height="74"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-Qr-RMd">
+                                <rect key="frame" x="25" y="603" width="325" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="8vs-EB-bCR"/>
+                                    <constraint firstAttribute="height" constant="44" id="8vs-EB-bCR"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -182,20 +182,21 @@
                             <constraint firstItem="No5-9c-cYQ" firstAttribute="top" secondItem="x9e-Fh-kZ5" secondAttribute="bottom" constant="35" id="6fh-b6-kUa"/>
                             <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x9e-Fh-kZ5" secondAttribute="trailing" constant="25" id="7dq-DF-IDI"/>
                             <constraint firstItem="No5-9c-cYQ" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" id="FM8-Ht-E3m"/>
-                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="bottom" secondItem="KZI-Qr-RMd" secondAttribute="bottom" id="G4u-hl-tXb"/>
+                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="bottom" secondItem="KZI-Qr-RMd" secondAttribute="bottom" constant="20" id="G4u-hl-tXb"/>
                             <constraint firstItem="JDo-mo-TOp" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" constant="25" id="O3j-VV-zFw"/>
                             <constraint firstItem="x9e-Fh-kZ5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JDo-mo-TOp" secondAttribute="trailing" constant="25" id="QkX-qW-aRf"/>
-                            <constraint firstItem="KZI-Qr-RMd" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" id="V7H-jj-p4h"/>
+                            <constraint firstItem="KZI-Qr-RMd" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" constant="25" id="V7H-jj-p4h"/>
                             <constraint firstItem="x9e-Fh-kZ5" firstAttribute="top" secondItem="Suy-xf-CbJ" secondAttribute="top" constant="20" id="Xgh-fs-OfX"/>
                             <constraint firstItem="x9e-Fh-kZ5" firstAttribute="centerX" secondItem="Suy-xf-CbJ" secondAttribute="centerX" id="alO-ae-CtW"/>
                             <constraint firstItem="JDo-mo-TOp" firstAttribute="centerY" secondItem="x9e-Fh-kZ5" secondAttribute="centerY" id="euE-CY-nGE"/>
                             <constraint firstItem="Suy-xf-CbJ" firstAttribute="bottom" secondItem="No5-9c-cYQ" secondAttribute="bottom" id="fJb-b4-QBJ"/>
-                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" secondItem="KZI-Qr-RMd" secondAttribute="trailing" id="gvJ-Gc-Xqf"/>
+                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" secondItem="KZI-Qr-RMd" secondAttribute="trailing" constant="25" id="gvJ-Gc-Xqf"/>
                             <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" secondItem="No5-9c-cYQ" secondAttribute="trailing" id="zm9-cg-ihu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Suy-xf-CbJ"/>
                     </view>
                     <connections>
+                        <outlet property="answersStackView" destination="KZI-Qr-RMd" id="r81-ax-bTM"/>
                         <outlet property="tableView" destination="No5-9c-cYQ" id="05r-sv-Xfa"/>
                     </connections>
                 </viewController>

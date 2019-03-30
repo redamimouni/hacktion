@@ -11,4 +11,5 @@ import Foundation
 struct Message {
   let text: String
   let sender: MessageSender
+  let possibleAnswers: [String]?
 }
