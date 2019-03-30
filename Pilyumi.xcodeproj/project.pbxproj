@@ -28,7 +28,9 @@
 		ABE07113224E9DAA00129199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF4899F224F6F8C000D6378 /* hacktion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hacktion.entitlements; sourceTree = "<group>"; };
 		ABF489A0224F7040000D6378 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D2B2FE87AEEBACDFCDE5667A /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
 		E978002B3D516925EDC51D60 /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1466F722818E9EB4CFFE50 /* Pods-Pilyumi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pilyumi/Pods-Pilyumi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,8 @@
 			children = (
 				E978002B3D516925EDC51D60 /* Pods-Pilyumi.debug.xcconfig */,
 				24DE54A3412A0091D13106DF /* Pods-Pilyumi.release.xcconfig */,
+				D2B2FE87AEEBACDFCDE5667A /* Pods-Pilyumi.debug.xcconfig */,
+				EF1466F722818E9EB4CFFE50 /* Pods-Pilyumi.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
