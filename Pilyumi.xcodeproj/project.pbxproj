@@ -14,6 +14,14 @@
 		ABE0710F224E9DAA00129199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE0710E224E9DAA00129199 /* Assets.xcassets */; };
 		ABE07112224E9DAA00129199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE07110224E9DAA00129199 /* LaunchScreen.storyboard */; };
 		ABF489A1224F7040000D6378 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF489A0224F7040000D6378 /* GoogleService-Info.plist */; };
+		ABF489A4224FAC59000D6378 /* CheckinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489A3224FAC59000D6378 /* CheckinView.xib */; };
+		ABF489A6224FAF66000D6378 /* CheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489A5224FAF66000D6378 /* CheckinView.swift */; };
+		ABF489A8224FB9BA000D6378 /* MoodMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489A7224FB9BA000D6378 /* MoodMeter.swift */; };
+		ABF489AA224FB9D9000D6378 /* MoodMeter.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489A9224FB9D9000D6378 /* MoodMeter.xib */; };
+		ABF489AC224FBF64000D6378 /* Streak.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489AB224FBF64000D6378 /* Streak.xib */; };
+		ABF489AE224FC0BF000D6378 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489AD224FC0BF000D6378 /* Streak.swift */; };
+		ABF489B0224FC21F000D6378 /* Funfacts.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489AF224FC21F000D6378 /* Funfacts.xib */; };
+		ABF489B2224FC300000D6378 /* Funfacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489B1224FC300000D6378 /* Funfacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		ABE07113224E9DAA00129199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF4899F224F6F8C000D6378 /* hacktion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hacktion.entitlements; sourceTree = "<group>"; };
 		ABF489A0224F7040000D6378 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABF489A3224FAC59000D6378 /* CheckinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckinView.xib; sourceTree = "<group>"; };
+		ABF489A5224FAF66000D6378 /* CheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinView.swift; sourceTree = "<group>"; };
+		ABF489A7224FB9BA000D6378 /* MoodMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodMeter.swift; sourceTree = "<group>"; };
+		ABF489A9224FB9D9000D6378 /* MoodMeter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodMeter.xib; sourceTree = "<group>"; };
+		ABF489AB224FBF64000D6378 /* Streak.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Streak.xib; sourceTree = "<group>"; };
+		ABF489AD224FC0BF000D6378 /* Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
+		ABF489AF224FC21F000D6378 /* Funfacts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Funfacts.xib; sourceTree = "<group>"; };
+		ABF489B1224FC300000D6378 /* Funfacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funfacts.swift; sourceTree = "<group>"; };
 		D2B2FE87AEEBACDFCDE5667A /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
 		E978002B3D516925EDC51D60 /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1466F722818E9EB4CFFE50 /* Pods-Pilyumi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pilyumi/Pods-Pilyumi.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +93,7 @@
 		ABE07106224E9DA800129199 /* hacktion */ = {
 			isa = PBXGroup;
 			children = (
+				ABF489A2224FAC1F000D6378 /* views */,
 				ABF4899F224F6F8C000D6378 /* hacktion.entitlements */,
 				ABE07107224E9DA800129199 /* AppDelegate.swift */,
 				ABE07109224E9DA800129199 /* ViewController.swift */,
@@ -87,6 +104,21 @@
 				ABF489A0224F7040000D6378 /* GoogleService-Info.plist */,
 			);
 			path = hacktion;
+			sourceTree = "<group>";
+		};
+		ABF489A2224FAC1F000D6378 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				ABF489A3224FAC59000D6378 /* CheckinView.xib */,
+				ABF489A5224FAF66000D6378 /* CheckinView.swift */,
+				ABF489A7224FB9BA000D6378 /* MoodMeter.swift */,
+				ABF489A9224FB9D9000D6378 /* MoodMeter.xib */,
+				ABF489AB224FBF64000D6378 /* Streak.xib */,
+				ABF489AD224FC0BF000D6378 /* Streak.swift */,
+				ABF489AF224FC21F000D6378 /* Funfacts.xib */,
+				ABF489B1224FC300000D6378 /* Funfacts.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		DC8C30B92B09125AEA0F91D0 /* Frameworks */ = {
@@ -166,6 +198,10 @@
 				ABE0710F224E9DAA00129199 /* Assets.xcassets in Resources */,
 				ABE0710D224E9DA800129199 /* Main.storyboard in Resources */,
 				ABF489A1224F7040000D6378 /* GoogleService-Info.plist in Resources */,
+				ABF489AA224FB9D9000D6378 /* MoodMeter.xib in Resources */,
+				ABF489AC224FBF64000D6378 /* Streak.xib in Resources */,
+				ABF489A4224FAC59000D6378 /* CheckinView.xib in Resources */,
+				ABF489B0224FC21F000D6378 /* Funfacts.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE0710A224E9DA800129199 /* ViewController.swift in Sources */,
+				ABF489A8224FB9BA000D6378 /* MoodMeter.swift in Sources */,
 				ABE07108224E9DA800129199 /* AppDelegate.swift in Sources */,
+				ABF489A6224FAF66000D6378 /* CheckinView.swift in Sources */,
+				ABF489AE224FC0BF000D6378 /* Streak.swift in Sources */,
+				ABF489B2224FC300000D6378 /* Funfacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
