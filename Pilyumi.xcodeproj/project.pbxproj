@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08703D8DF535D20AF74B3B66 /* Pods_hacktion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A022671C7D54F5E32DF44A /* Pods_hacktion.framework */; };
+		A6CA4712BF09D3745FD3CA1E /* Pods_Pilyumi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */; };
 		ABE07108224E9DA800129199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07107224E9DA800129199 /* AppDelegate.swift */; };
 		ABE0710A224E9DA800129199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07109224E9DA800129199 /* ViewController.swift */; };
 		ABE0710D224E9DA800129199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE0710B224E9DA800129199 /* Main.storyboard */; };
@@ -17,7 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02A022671C7D54F5E32DF44A /* Pods_hacktion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hacktion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24DE54A3412A0091D13106DF /* Pods-Pilyumi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.release.xcconfig"; path = "Target Support Files/Pods-Pilyumi/Pods-Pilyumi.release.xcconfig"; sourceTree = "<group>"; };
+		5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pilyumi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07104224E9DA800129199 /* Pilyumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pilyumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07107224E9DA800129199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE07109224E9DA800129199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,8 +28,7 @@
 		ABE07113224E9DAA00129199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF4899F224F6F8C000D6378 /* hacktion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hacktion.entitlements; sourceTree = "<group>"; };
 		ABF489A0224F7040000D6378 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D22827DEC6D58383AE53D0B7 /* Pods-hacktion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hacktion.release.xcconfig"; path = "Pods/Target Support Files/Pods-hacktion/Pods-hacktion.release.xcconfig"; sourceTree = "<group>"; };
-		E99DB009A375E828CEB6D885 /* Pods-hacktion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hacktion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hacktion/Pods-hacktion.debug.xcconfig"; sourceTree = "<group>"; };
+		E978002B3D516925EDC51D60 /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,20 +36,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08703D8DF535D20AF74B3B66 /* Pods_hacktion.framework in Frameworks */,
+				A6CA4712BF09D3745FD3CA1E /* Pods_Pilyumi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		316D69F2EEC5D70B06E789BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E978002B3D516925EDC51D60 /* Pods-Pilyumi.debug.xcconfig */,
+				24DE54A3412A0091D13106DF /* Pods-Pilyumi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ABE070FB224E9DA800129199 = {
 			isa = PBXGroup;
 			children = (
 				ABE07106224E9DA800129199 /* hacktion */,
 				ABE07105224E9DA800129199 /* Products */,
-				F70EAD604C59504E3AAD1799 /* Pods */,
-				BFBB71106BB61975CB0C3D54 /* Frameworks */,
+				316D69F2EEC5D70B06E789BC /* Pods */,
+				DC8C30B92B09125AEA0F91D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,21 +85,12 @@
 			path = hacktion;
 			sourceTree = "<group>";
 		};
-		BFBB71106BB61975CB0C3D54 /* Frameworks */ = {
+		DC8C30B92B09125AEA0F91D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02A022671C7D54F5E32DF44A /* Pods_hacktion.framework */,
+				5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F70EAD604C59504E3AAD1799 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E99DB009A375E828CEB6D885 /* Pods-hacktion.debug.xcconfig */,
-				D22827DEC6D58383AE53D0B7 /* Pods-hacktion.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,11 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABE07116224E9DAA00129199 /* Build configuration list for PBXNativeTarget "Pilyumi" */;
 			buildPhases = (
-				B4495DD428562B9B8E0DB9FA /* [CP] Check Pods Manifest.lock */,
+				79D17F3AA144CE129716D496 /* [CP] Check Pods Manifest.lock */,
 				ABE07100224E9DA800129199 /* Sources */,
 				ABE07101224E9DA800129199 /* Frameworks */,
 				ABE07102224E9DA800129199 /* Resources */,
-				C71255F7F78F77BB53F1FF0B /* [CP] Embed Pods Frameworks */,
+				B56C87AA4DC891E6EBCECD79 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,7 +168,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B4495DD428562B9B8E0DB9FA /* [CP] Check Pods Manifest.lock */ = {
+		79D17F3AA144CE129716D496 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,14 +183,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-hacktion-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Pilyumi-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C71255F7F78F77BB53F1FF0B /* [CP] Embed Pods Frameworks */ = {
+		B56C87AA4DC891E6EBCECD79 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,22 +198,24 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-hacktion/Pods-hacktion-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Pilyumi/Pods-Pilyumi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hacktion/Pods-hacktion-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pilyumi/Pods-Pilyumi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -368,7 +370,7 @@
 		};
 		ABE07117224E9DAA00129199 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E99DB009A375E828CEB6D885 /* Pods-hacktion.debug.xcconfig */;
+			baseConfigurationReference = E978002B3D516925EDC51D60 /* Pods-Pilyumi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = hacktion/hacktion.entitlements;
@@ -388,7 +390,7 @@
 		};
 		ABE07118224E9DAA00129199 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D22827DEC6D58383AE53D0B7 /* Pods-hacktion.release.xcconfig */;
+			baseConfigurationReference = 24DE54A3412A0091D13106DF /* Pods-Pilyumi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = hacktion/hacktion.entitlements;
