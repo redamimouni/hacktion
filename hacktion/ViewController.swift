@@ -14,8 +14,15 @@ class ViewController: UIViewController {
   @IBOutlet weak var countdownLabel: UILabel!
   @IBOutlet weak var carouselView: iCarousel!
   
-  var timer: Timer!
-  var nextPillDate: Date!
+  private var timer: Timer!
+  private var nextPillDate: Date!
+  
+  private let colors: [UIColor] = [
+    UIColor(red: 1/255, green: 140/255, blue: 203/255, alpha: 1),
+    UIColor(red: 108/255, green: 184/255, blue: 255/255, alpha: 1),
+    UIColor(red: 0/255, green: 86/255, blue: 180/255, alpha: 1),
+    UIColor(red: 105/255, green: 55/255, blue: 146/255, alpha: 1)
+  ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -47,7 +54,7 @@ class ViewController: UIViewController {
 
 extension ViewController: iCarouselDataSource {
   func numberOfItems(in carousel: iCarousel!) -> Int {
-    return 3
+    return 4
   }
   
   func carousel(_ carousel: iCarousel!, viewForItemAt index: Int, reusing view: UIView!) -> UIView! {
@@ -72,5 +79,9 @@ extension ViewController: iCarouselDelegate {
       return value * 1.05
     }
     return value
+  }
+  
+  func carouselCurrentItemIndexDidChange(_ carousel: iCarousel!) {
+    view.backgroundColor = colors[carousel.currentItemIndex]
   }
 }
