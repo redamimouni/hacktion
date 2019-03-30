@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		02A022671C7D54F5E32DF44A /* Pods_hacktion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hacktion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABE07104224E9DA800129199 /* hacktion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hacktion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE07104224E9DA800129199 /* Pilyumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pilyumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07107224E9DA800129199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE07109224E9DA800129199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABE0710C224E9DA800129199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		ABE07105224E9DA800129199 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABE07104224E9DA800129199 /* hacktion.app */,
+				ABE07104224E9DA800129199 /* Pilyumi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,9 +96,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABE07103224E9DA800129199 /* hacktion */ = {
+		ABE07103224E9DA800129199 /* Pilyumi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABE07116224E9DAA00129199 /* Build configuration list for PBXNativeTarget "hacktion" */;
+			buildConfigurationList = ABE07116224E9DAA00129199 /* Build configuration list for PBXNativeTarget "Pilyumi" */;
 			buildPhases = (
 				B4495DD428562B9B8E0DB9FA /* [CP] Check Pods Manifest.lock */,
 				ABE07100224E9DA800129199 /* Sources */,
@@ -110,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = hacktion;
+			name = Pilyumi;
 			productName = hacktion;
-			productReference = ABE07104224E9DA800129199 /* hacktion.app */;
+			productReference = ABE07104224E9DA800129199 /* Pilyumi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ABE070FF224E9DA800129199 /* Build configuration list for PBXProject "hacktion" */;
+			buildConfigurationList = ABE070FF224E9DA800129199 /* Build configuration list for PBXProject "Pilyumi" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABE07103224E9DA800129199 /* hacktion */,
+				ABE07103224E9DA800129199 /* Pilyumi */,
 			);
 		};
 /* End PBXProject section */
@@ -409,7 +409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ABE070FF224E9DA800129199 /* Build configuration list for PBXProject "hacktion" */ = {
+		ABE070FF224E9DA800129199 /* Build configuration list for PBXProject "Pilyumi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABE07114224E9DAA00129199 /* Debug */,
@@ -418,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABE07116224E9DAA00129199 /* Build configuration list for PBXNativeTarget "hacktion" */ = {
+		ABE07116224E9DAA00129199 /* Build configuration list for PBXNativeTarget "Pilyumi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABE07117224E9DAA00129199 /* Debug */,
