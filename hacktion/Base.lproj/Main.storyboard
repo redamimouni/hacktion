@@ -27,19 +27,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phW-gn-M1R">
-                                <rect key="frame" x="130" y="40" width="115" height="38.5"/>
+                                <rect key="frame" x="130" y="30" width="115" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="before your next pill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMw-Ln-qmf">
-                                <rect key="frame" x="120" y="78.5" width="135.5" height="20.5"/>
+                                <rect key="frame" x="120" y="68.5" width="135.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito SemiBold" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaR-Um-eLu" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="139" width="375" height="248"/>
+                                <rect key="frame" x="0.0" y="124" width="375" height="263"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +79,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bGD-wg-Tp1"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-Ff-zXx">
+                                <rect key="frame" x="25" y="38.5" width="16" height="22"/>
+                                <state key="normal" image="Menu"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.5490196078431373" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,11 +90,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="phW-gn-M1R" secondAttribute="trailing" constant="16" id="2Wt-u0-Rba"/>
                             <constraint firstItem="jMw-Ln-qmf" firstAttribute="top" secondItem="phW-gn-M1R" secondAttribute="bottom" id="ASq-9n-9sZ"/>
                             <constraint firstItem="jMw-Ln-qmf" firstAttribute="centerX" secondItem="phW-gn-M1R" secondAttribute="centerX" id="DpA-cM-PBA"/>
-                            <constraint firstItem="qaR-Um-eLu" firstAttribute="top" secondItem="jMw-Ln-qmf" secondAttribute="bottom" constant="40" id="Mk3-Ho-bTx"/>
+                            <constraint firstItem="qaR-Um-eLu" firstAttribute="top" secondItem="jMw-Ln-qmf" secondAttribute="bottom" constant="35" id="Mk3-Ho-bTx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jMw-Ln-qmf" secondAttribute="trailing" constant="16" id="PdM-h8-tpV"/>
-                            <constraint firstItem="phW-gn-M1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Rc0-KN-jLU"/>
+                            <constraint firstItem="phW-gn-M1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Rc0-KN-jLU"/>
+                            <constraint firstItem="8yd-Ff-zXx" firstAttribute="centerY" secondItem="phW-gn-M1R" secondAttribute="centerY" id="hyY-No-f7L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qaR-Um-eLu" secondAttribute="trailing" id="iZU-9J-Bs7"/>
+                            <constraint firstItem="8yd-Ff-zXx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="kFb-tG-cPu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oux-qR-Nd7" secondAttribute="trailing" id="m0J-gJ-fVM"/>
+                            <constraint firstItem="phW-gn-M1R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8yd-Ff-zXx" secondAttribute="trailing" constant="25" id="mOt-H1-mJH"/>
                             <constraint firstItem="qaR-Um-eLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="noc-gB-4aO"/>
                             <constraint firstItem="Oux-qR-Nd7" firstAttribute="top" secondItem="qaR-Um-eLu" secondAttribute="bottom" constant="20" id="paI-sP-WcS"/>
                             <constraint firstItem="phW-gn-M1R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q1B-v6-P87"/>
@@ -112,4 +119,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Menu" width="16" height="14"/>
+    </resources>
 </document>
