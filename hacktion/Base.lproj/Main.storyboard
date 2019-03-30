@@ -25,16 +25,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaR-Um-eLu" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="136.5" width="375" height="230.5"/>
+                                <rect key="frame" x="0.0" y="136.5" width="375" height="250.5"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titlePlaceholderColor">
                                         <color key="value" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" red="0.33725490196078434" green="0.80392156862745101" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,8 +42,13 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventDefaultColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="xOl-wj-evE"/>
@@ -82,7 +84,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qaR-Um-eLu" secondAttribute="trailing" id="iZU-9J-Bs7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oux-qR-Nd7" secondAttribute="trailing" id="m0J-gJ-fVM"/>
                             <constraint firstItem="qaR-Um-eLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="noc-gB-4aO"/>
-                            <constraint firstItem="Oux-qR-Nd7" firstAttribute="top" secondItem="qaR-Um-eLu" secondAttribute="bottom" constant="40" id="paI-sP-WcS"/>
+                            <constraint firstItem="Oux-qR-Nd7" firstAttribute="top" secondItem="qaR-Um-eLu" secondAttribute="bottom" constant="20" id="paI-sP-WcS"/>
                             <constraint firstItem="phW-gn-M1R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q1B-v6-P87"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oux-qR-Nd7" secondAttribute="bottom" constant="20" id="tyn-PL-cEX"/>
                             <constraint firstItem="Oux-qR-Nd7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uBU-nA-XeU"/>
