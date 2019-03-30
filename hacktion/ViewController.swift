@@ -47,16 +47,22 @@ class ViewController: UIViewController {
 
 extension ViewController: iCarouselDataSource {
   func numberOfItems(in carousel: iCarousel!) -> Int {
-    return 5
+    return 3
   }
   
   func carousel(_ carousel: iCarousel!, viewForItemAt index: Int, reusing view: UIView!) -> UIView! {
-    let view = UIView(frame: CGRect(x: 0, y: 0, width: carousel.frame.width - 160, height: carousel.frame.height))
-    view.backgroundColor = index % 2 == 0 ? .red : .blue
-    let label = UILabel(frame: CGRect(x: 0, y: 0, width: carousel.frame.width, height: 50))
+    let marginX: CGFloat = 65
+    
+    let itemView = UIView(frame: CGRect(x: 0, y: 0, width: carousel.frame.width - marginX * 2, height: carousel.frame.height))
+    itemView.backgroundColor = .white
+    itemView.layer.cornerRadius = 12
+    
+    let label = UILabel(frame: CGRect(x: 0, y: 20, width: itemView.frame.width, height: 50))
     label.text = "Titre"
-    view.addSubview(label)
-    return view
+    label.textAlignment = .center
+    
+    itemView.addSubview(label)
+    return itemView
   }
 }
 

@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phW-gn-M1R">
-                                <rect key="frame" x="151.5" y="50" width="72" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="123" y="40" width="129" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaR-Um-eLu" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="100.5" width="375" height="306.5"/>
+                                <rect key="frame" x="0.0" y="136.5" width="375" height="230.5"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,30 +48,40 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oux-qR-Nd7" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="437" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="407" width="375" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="ek0-gd-L1F"/>
+                                    <constraint firstAttribute="height" constant="240" id="ek0-gd-L1F"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Y1z-sR-B6g"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bGD-wg-Tp1"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="before your next pill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMw-Ln-qmf">
+                                <rect key="frame" x="119.5" y="78.5" width="136" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.5490196078431373" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="phW-gn-M1R" secondAttribute="trailing" constant="16" id="2Wt-u0-Rba"/>
-                            <constraint firstItem="phW-gn-M1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Rc0-KN-jLU"/>
+                            <constraint firstItem="jMw-Ln-qmf" firstAttribute="top" secondItem="phW-gn-M1R" secondAttribute="bottom" constant="5" id="ASq-9n-9sZ"/>
+                            <constraint firstItem="jMw-Ln-qmf" firstAttribute="centerX" secondItem="phW-gn-M1R" secondAttribute="centerX" id="DpA-cM-PBA"/>
+                            <constraint firstItem="qaR-Um-eLu" firstAttribute="top" secondItem="jMw-Ln-qmf" secondAttribute="bottom" constant="40" id="Mk3-Ho-bTx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jMw-Ln-qmf" secondAttribute="trailing" constant="16" id="PdM-h8-tpV"/>
+                            <constraint firstItem="phW-gn-M1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Rc0-KN-jLU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qaR-Um-eLu" secondAttribute="trailing" id="iZU-9J-Bs7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oux-qR-Nd7" secondAttribute="trailing" id="m0J-gJ-fVM"/>
-                            <constraint firstItem="qaR-Um-eLu" firstAttribute="top" secondItem="phW-gn-M1R" secondAttribute="bottom" constant="30" id="n69-VA-2Ze"/>
                             <constraint firstItem="qaR-Um-eLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="noc-gB-4aO"/>
-                            <constraint firstItem="Oux-qR-Nd7" firstAttribute="top" secondItem="qaR-Um-eLu" secondAttribute="bottom" constant="30" id="paI-sP-WcS"/>
+                            <constraint firstItem="Oux-qR-Nd7" firstAttribute="top" secondItem="qaR-Um-eLu" secondAttribute="bottom" constant="40" id="paI-sP-WcS"/>
                             <constraint firstItem="phW-gn-M1R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q1B-v6-P87"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oux-qR-Nd7" secondAttribute="bottom" constant="30" id="tyn-PL-cEX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oux-qR-Nd7" secondAttribute="bottom" constant="20" id="tyn-PL-cEX"/>
                             <constraint firstItem="Oux-qR-Nd7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uBU-nA-XeU"/>
                             <constraint firstItem="phW-gn-M1R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xnK-v8-vaT"/>
+                            <constraint firstItem="jMw-Ln-qmf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zJT-P6-8QL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
