@@ -203,6 +203,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLu-hJ-p4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="133.5832083958021"/>
+        <scene sceneID="phX-pc-Av9">
+            <objects>
+                <viewController storyboardIdentifier="cardDetailVc" id="G5h-vX-Wo6" customClass="CardDetailViewController" customModule="Pilyumi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SHS-vn-nEa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoL-OV-Qa8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tE3-yy-hJp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWh-8l-Kyd" customClass="CardContentView" customModule="Pilyumi" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="56" width="324" height="386"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tE3-yy-hJp" secondAttribute="bottom" id="F29-W5-eWX"/>
+                                    <constraint firstItem="tE3-yy-hJp" firstAttribute="centerY" secondItem="OoL-OV-Qa8" secondAttribute="centerY" id="FWR-FI-KJ0"/>
+                                    <constraint firstItem="tE3-yy-hJp" firstAttribute="top" secondItem="OoL-OV-Qa8" secondAttribute="top" id="brs-kZ-Nit"/>
+                                    <constraint firstItem="tE3-yy-hJp" firstAttribute="centerX" secondItem="OoL-OV-Qa8" secondAttribute="centerX" id="phT-w6-etJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="tE3-yy-hJp" secondAttribute="trailing" id="rL4-PS-zf4"/>
+                                    <constraint firstItem="tE3-yy-hJp" firstAttribute="leading" secondItem="OoL-OV-Qa8" secondAttribute="leading" id="tQW-bd-zAu"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fN-fL-QZd">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="ie7-zq-xkx"/>
+                                    <constraint firstAttribute="height" constant="30" id="txR-9F-5c7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="close" destination="G5h-vX-Wo6" eventType="touchUpInside" id="XFZ-P7-caE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OoL-OV-Qa8" firstAttribute="leading" secondItem="SHS-vn-nEa" secondAttribute="leading" id="7VH-84-XUK"/>
+                            <constraint firstItem="OoL-OV-Qa8" firstAttribute="top" secondItem="SHS-vn-nEa" secondAttribute="top" id="BdO-at-0E6"/>
+                            <constraint firstAttribute="trailing" secondItem="OoL-OV-Qa8" secondAttribute="trailing" id="CXg-NK-bSK"/>
+                            <constraint firstItem="6fN-fL-QZd" firstAttribute="top" secondItem="Axi-ro-opT" secondAttribute="top" id="Cef-IE-AFl"/>
+                            <constraint firstItem="OoL-OV-Qa8" firstAttribute="top" secondItem="SHS-vn-nEa" secondAttribute="top" id="S3l-Ns-434"/>
+                            <constraint firstItem="OoL-OV-Qa8" firstAttribute="bottom" secondItem="Axi-ro-opT" secondAttribute="bottom" id="dNY-Hu-3Y9"/>
+                            <constraint firstItem="OoL-OV-Qa8" firstAttribute="trailing" secondItem="Axi-ro-opT" secondAttribute="trailing" id="fsF-Nr-DJS"/>
+                            <constraint firstItem="OoL-OV-Qa8" firstAttribute="leading" secondItem="Axi-ro-opT" secondAttribute="leading" id="oHE-xG-nme"/>
+                            <constraint firstItem="6fN-fL-QZd" firstAttribute="leading" secondItem="Axi-ro-opT" secondAttribute="leading" constant="16" id="pbn-pn-oNq"/>
+                            <constraint firstItem="OoL-OV-Qa8" firstAttribute="bottom" secondItem="Axi-ro-opT" secondAttribute="bottom" id="vvq-hB-hjd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Axi-ro-opT"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cardContentView" destination="XWh-8l-Kyd" id="KIO-U0-6QR"/>
+                        <outlet property="scrollView" destination="OoL-OV-Qa8" id="frS-tJ-Cmn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qaw-sS-8bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>

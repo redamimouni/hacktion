@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Funfacts: UIView {
+class Funfacts: BaseView {
     
 }

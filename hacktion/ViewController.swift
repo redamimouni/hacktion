@@ -12,6 +12,8 @@ import iCarousel
 
 class ViewController: UIViewController {
 
+private var transition: CardTransition?
+    
   @IBOutlet weak var countdownLabel: UILabel!
   @IBOutlet weak var calendarView: FSCalendar!
   @IBOutlet weak var carouselView: iCarousel!
@@ -96,18 +98,19 @@ extension ViewController: iCarouselDataSource {
     
     let itemView = UIView(frame: CGRect(x: 0, y: 0, width: carousel.frame.width - marginX * 2, height: carousel.frame.height))
     if index == 2 {
-        let checkinView = Bundle.main.loadNibNamed("CheckinView", owner: self, options: nil)?.first as? CheckinView
-        checkinView?.initViews()
+        let checkinView = Bundle.main.loadNibNamed("CheckinView", owner: self, options: nil)?.first as? BaseView
         itemView.addSubview(checkinView!)
     } else if index == 1 {
-        let moodView = Bundle.main.loadNibNamed("MoodMeter", owner: self, options: nil)?.first as? MoodMeter
-        moodView?.initViews()
+        let moodView = Bundle.main.loadNibNamed("MoodMeter", owner: self, options: nil)?.first as? BaseView
         itemView.addSubview(moodView!)
     } else if index == 0 {
-        let streakView = Bundle.main.loadNibNamed("Streak", owner: self, options: nil)?.first as? Streak
+        let streakView = Bundle.main.loadNibNamed("Streak", owner: self, options: nil)?.first as? BaseView
         itemView.addSubview(streakView!)
     } else if index == 3 {
-        let funfactsView = Bundle.main.loadNibNamed("Funfacts", owner: self, options: nil)?.first as? Funfacts
+        let funfactsView = Bundle.main.loadNibNamed("Funfacts", owner: self, options: nil)?.first as? BaseView
+        funfactsView?.addTapGestureRecognizer(action: {
+            self.animate(view: funfactsView!)
+        })
         itemView.addSubview(funfactsView!)
     }
     itemView.layer.cornerRadius = 5
@@ -117,6 +120,40 @@ extension ViewController: iCarouselDataSource {
     itemView.layer.shadowRadius = 1
     return itemView
   }
+    
+    func animate(view: BaseView) {
+        view.freezeAnimations()
+        let currentCellFrame = view.layer.presentation()!.frame
+        let cardPresentationFrameOnScreen = view.superview!.convert(currentCellFrame, to: nil)
+        let cardFrameWithoutTransform = { () -> CGRect in
+            let center = view.center
+            let size = view.bounds.size
+            let r = CGRect(
+                x: center.x - size.width / 2,
+                y: center.y - size.height / 2,
+                width: size.width,
+                height: size.height
+            )
+            return view.superview!.convert(r, to: nil)
+        }()
+        let vc = storyboard!.instantiateViewController(withIdentifier: "cardDetailVc") as! CardDetailViewController
+        //vc.cardViewModel = cardModel.highlightedImage()
+        //vc.unhighlightedCardViewModel = cardModel // Keep the original one to restore when dismiss
+        let params = CardTransition.Params(fromCardFrame: cardPresentationFrameOnScreen,
+                                           fromCardFrameWithoutTransform: cardFrameWithoutTransform,
+                                           fromCell: view)
+        transition = CardTransition(params: params)
+        vc.transitioningDelegate = transition
+        
+        // If `modalPresentationStyle` is not `.fullScreen`, this should be set to true to make status bar depends on presented vc.
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        vc.modalPresentationStyle = .custom
+        
+        present(vc, animated: true, completion: { [unowned view] in
+            // Unfreeze
+            view.unfreezeAnimations()
+        })
+    }
 }
 
 extension ViewController: iCarouselDelegate {

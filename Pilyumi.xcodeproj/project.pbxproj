@@ -33,6 +33,18 @@
 		ABF489B0224FC21F000D6378 /* Funfacts.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489AF224FC21F000D6378 /* Funfacts.xib */; };
 		ABF489B2224FC300000D6378 /* Funfacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489B1224FC300000D6378 /* Funfacts.swift */; };
 		ABF489B5224FCED5000D6378 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABF489B4224FCED5000D6378 /* Nunito-SemiBold.ttf */; };
+		ABF489B7224FDED8000D6378 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489B6224FDED8000D6378 /* Extension.swift */; };
+		ABF489B9224FE613000D6378 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489B8224FE613000D6378 /* Constants.swift */; };
+		ABF489BB224FE75C000D6378 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489BA224FE75C000D6378 /* CardDetailViewController.swift */; };
+		ABF489BD224FE880000D6378 /* StatusBarAnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489BC224FE87F000D6378 /* StatusBarAnimatableViewController.swift */; };
+		ABF489BF224FE8FF000D6378 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489BE224FE8FF000D6378 /* CardContentView.swift */; };
+		ABF489C1224FE924000D6378 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489C0224FE924000D6378 /* NibLoadable.swift */; };
+		ABF489C3224FEC57000D6378 /* CardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489C2224FEC57000D6378 /* CardTransition.swift */; };
+		ABF489C5224FED49000D6378 /* PresentCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489C4224FED49000D6378 /* PresentCardAnimator.swift */; };
+		ABF489C7224FEE60000D6378 /* DismissCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489C6224FEE60000D6378 /* DismissCardAnimator.swift */; };
+		ABF489C9224FEEB8000D6378 /* CardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489C8224FEEB8000D6378 /* CardPresentationController.swift */; };
+		ABF489CB224FF26A000D6378 /* CardContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489CA224FF26A000D6378 /* CardContentView.xib */; };
+		ABF489CD224FF438000D6378 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489CC224FF438000D6378 /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +78,18 @@
 		ABF489AF224FC21F000D6378 /* Funfacts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Funfacts.xib; sourceTree = "<group>"; };
 		ABF489B1224FC300000D6378 /* Funfacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funfacts.swift; sourceTree = "<group>"; };
 		ABF489B4224FCED5000D6378 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		ABF489B6224FDED8000D6378 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		ABF489B8224FE613000D6378 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ABF489BA224FE75C000D6378 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		ABF489BC224FE87F000D6378 /* StatusBarAnimatableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarAnimatableViewController.swift; sourceTree = "<group>"; };
+		ABF489BE224FE8FF000D6378 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
+		ABF489C0224FE924000D6378 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		ABF489C2224FEC57000D6378 /* CardTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransition.swift; sourceTree = "<group>"; };
+		ABF489C4224FED49000D6378 /* PresentCardAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentCardAnimator.swift; sourceTree = "<group>"; };
+		ABF489C6224FEE60000D6378 /* DismissCardAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissCardAnimator.swift; sourceTree = "<group>"; };
+		ABF489C8224FEEB8000D6378 /* CardPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPresentationController.swift; sourceTree = "<group>"; };
+		ABF489CA224FF26A000D6378 /* CardContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardContentView.xib; sourceTree = "<group>"; };
+		ABF489CC224FF438000D6378 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D2B2FE87AEEBACDFCDE5667A /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
 		E978002B3D516925EDC51D60 /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1466F722818E9EB4CFFE50 /* Pods-Pilyumi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pilyumi/Pods-Pilyumi.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,16 +172,23 @@
 			children = (
 				5171848E225010AF00468D5D /* models */,
 				5171847C224FE6FB00468D5D /* fonts */,
+				ABF489CE224FF4AB000D6378 /* animationViews */,
 				ABF489A2224FAC1F000D6378 /* views */,
 				ABF4899F224F6F8C000D6378 /* hacktion.entitlements */,
 				ABE07107224E9DA800129199 /* AppDelegate.swift */,
 				ABE07109224E9DA800129199 /* ViewController.swift */,
 				51718483224FF47000468D5D /* PanicModeViewController.swift */,
+				ABF489BA224FE75C000D6378 /* CardDetailViewController.swift */,
+				ABF489BC224FE87F000D6378 /* StatusBarAnimatableViewController.swift */,
 				ABE0710B224E9DA800129199 /* Main.storyboard */,
 				ABE0710E224E9DAA00129199 /* Assets.xcassets */,
 				ABE07110224E9DAA00129199 /* LaunchScreen.storyboard */,
 				ABE07113224E9DAA00129199 /* Info.plist */,
 				ABF489A0224F7040000D6378 /* GoogleService-Info.plist */,
+				ABF489B8224FE613000D6378 /* Constants.swift */,
+				ABF489C4224FED49000D6378 /* PresentCardAnimator.swift */,
+				ABF489C6224FEE60000D6378 /* DismissCardAnimator.swift */,
+				ABF489C8224FEEB8000D6378 /* CardPresentationController.swift */,
 			);
 			path = hacktion;
 			sourceTree = "<group>";
@@ -171,11 +202,29 @@
 				ABF489A9224FB9D9000D6378 /* MoodMeter.xib */,
 				ABF489A7224FB9BA000D6378 /* MoodMeter.swift */,
 				ABF489AB224FBF64000D6378 /* Streak.xib */,
+				ABF489CC224FF438000D6378 /* BaseView.swift */,
+				ABF489A5224FAF66000D6378 /* CheckinView.swift */,
+				ABF489A7224FB9BA000D6378 /* MoodMeter.swift */,
 				ABF489AD224FC0BF000D6378 /* Streak.swift */,
-				ABF489AF224FC21F000D6378 /* Funfacts.xib */,
 				ABF489B1224FC300000D6378 /* Funfacts.swift */,
+				ABF489A3224FAC59000D6378 /* CheckinView.xib */,
+				ABF489A9224FB9D9000D6378 /* MoodMeter.xib */,
+				ABF489AF224FC21F000D6378 /* Funfacts.xib */,
+				ABF489AB224FBF64000D6378 /* Streak.xib */,
+				ABF489B6224FDED8000D6378 /* Extension.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		ABF489CE224FF4AB000D6378 /* animationViews */ = {
+			isa = PBXGroup;
+			children = (
+				ABF489BE224FE8FF000D6378 /* CardContentView.swift */,
+				ABF489C0224FE924000D6378 /* NibLoadable.swift */,
+				ABF489C2224FEC57000D6378 /* CardTransition.swift */,
+				ABF489CA224FF26A000D6378 /* CardContentView.xib */,
+			);
+			path = animationViews;
 			sourceTree = "<group>";
 		};
 		DC8C30B92B09125AEA0F91D0 /* Frameworks */ = {
@@ -262,6 +311,7 @@
 				51718489224FFC5C00468D5D /* MyMessageTableViewCell.xib in Resources */,
 				51718480224FE96D00468D5D /* Nunito-Bold.ttf in Resources */,
 				ABF489AA224FB9D9000D6378 /* MoodMeter.xib in Resources */,
+				ABF489CB224FF26A000D6378 /* CardContentView.xib in Resources */,
 				ABF489AC224FBF64000D6378 /* Streak.xib in Resources */,
 				ABF489A4224FAC59000D6378 /* CheckinView.xib in Resources */,
 				ABF489B0224FC21F000D6378 /* Funfacts.xib in Resources */,
@@ -330,17 +380,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF489BD224FE880000D6378 /* StatusBarAnimatableViewController.swift in Sources */,
 				ABE0710A224E9DA800129199 /* ViewController.swift in Sources */,
 				ABF489A8224FB9BA000D6378 /* MoodMeter.swift in Sources */,
+				ABF489CD224FF438000D6378 /* BaseView.swift in Sources */,
+				ABF489B7224FDED8000D6378 /* Extension.swift in Sources */,
+				ABF489C7224FEE60000D6378 /* DismissCardAnimator.swift in Sources */,
+				ABF489C5224FED49000D6378 /* PresentCardAnimator.swift in Sources */,
 				ABE07108224E9DA800129199 /* AppDelegate.swift in Sources */,
 				51718492225010EF00468D5D /* MessageSender.swift in Sources */,
 				5171848C22500E9800468D5D /* ChatbotMessageTableViewCell.swift in Sources */,
 				51718484224FF47000468D5D /* PanicModeViewController.swift in Sources */,
+				ABF489BB224FE75C000D6378 /* CardDetailViewController.swift in Sources */,
 				ABF489A6224FAF66000D6378 /* CheckinView.swift in Sources */,
 				51718487224FFC4100468D5D /* MyMessageTableViewCell.swift in Sources */,
 				51718490225010C200468D5D /* Message.swift in Sources */,
 				ABF489AE224FC0BF000D6378 /* Streak.swift in Sources */,
+				ABF489C9224FEEB8000D6378 /* CardPresentationController.swift in Sources */,
+				ABF489C3224FEC57000D6378 /* CardTransition.swift in Sources */,
 				ABF489B2224FC300000D6378 /* Funfacts.swift in Sources */,
+				ABF489C1224FE924000D6378 /* NibLoadable.swift in Sources */,
+				ABF489BF224FE8FF000D6378 /* CardContentView.swift in Sources */,
+				ABF489B9224FE613000D6378 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

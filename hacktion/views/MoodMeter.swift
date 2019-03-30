@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoodMeter: UIView {
+class MoodMeter: BaseView {
     @IBOutlet var fire: UIButton!
     @IBOutlet var rain: UIButton!
     @IBOutlet var soso: UIButton!

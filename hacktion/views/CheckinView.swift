@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CheckinView: UIView {
+class CheckinView: BaseView {
     @IBOutlet var hellYeah: UIButton!
     @IBOutlet var remindMe: UIButton!
     @IBOutlet var oops: UIButton!
