@@ -144,8 +144,6 @@ final class PresentCardTransitionDriver {
         params.fromCell.isHidden = true
         params.fromCell.resetTransform()
         
-        let topTemporaryFix = screens.cardDetail.cardContentView.topAnchor.constraint(equalTo: cardDetailView.topAnchor, constant: 0)
-        topTemporaryFix.isActive = GlobalConstants.isEnabledWeirdTopInsetsFix
         
         container.layoutIfNeeded()
         
@@ -175,7 +173,6 @@ final class PresentCardTransitionDriver {
             // Re-add to the top
             container.addSubview(cardDetailView)
             
-            cardDetailView.removeConstraints([topTemporaryFix, cardWidthConstraint, cardHeightConstraint])
             
             // Keep -1 to be consistent with the weird bug above.
             cardDetailView.edges(to: container, top: -1)

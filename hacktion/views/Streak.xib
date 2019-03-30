@@ -83,7 +83,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="52.799999999999997" y="92.203898050974516"/>
         </view>

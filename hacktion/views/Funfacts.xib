@@ -33,13 +33,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN5-Le-7UX">
-                    <rect key="frame" x="16" y="80" width="212" height="106"/>
+                    <rect key="frame" x="16" y="94" width="212" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     <attributedString key="attributedText">
-                        <fragment content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ! ">
+                        <fragment content="The human birth control pill also works on gorilla !">
                             <attributes>
-                                <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                <font key="NSFont" size="17" name="HelveticaNeue-Medium"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -65,7 +65,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="52.799999999999997" y="92.203898050974516"/>
         </view>

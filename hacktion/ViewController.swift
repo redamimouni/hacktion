@@ -51,8 +51,8 @@ private var transition: CardTransition?
   private let colors: [UIColor] = [
     UIColor(red: 108/255, green: 184/255, blue: 255/255, alpha: 1),
     UIColor(red: 1/255, green: 140/255, blue: 203/255, alpha: 1),
-    UIColor(red: 105/255, green: 55/255, blue: 146/255, alpha: 1),
-    UIColor(red: 0/255, green: 86/255, blue: 180/255, alpha: 1)
+    UIColor(red: 255/255, green: 113/255, blue: 60/255, alpha: 1),
+     UIColor(red: 105/255, green: 55/255, blue: 146/255, alpha: 1)
   ]
   
   override func viewDidLoad() {
@@ -98,11 +98,12 @@ extension ViewController: iCarouselDataSource {
     
     let itemView = UIView(frame: CGRect(x: 0, y: 0, width: carousel.frame.width - marginX * 2, height: carousel.frame.height))
     if index == 2 {
-        let checkinView = Bundle.main.loadNibNamed("CheckinView", owner: self, options: nil)?.first as? BaseView
-        itemView.addSubview(checkinView!)
+        let panicButtonView = Bundle.main.loadNibNamed("PanicButton", owner: self, options: nil)?.first as? PanicButton
+        view.addSubview(panicButtonView!)
     } else if index == 1 {
-        let moodView = Bundle.main.loadNibNamed("MoodMeter", owner: self, options: nil)?.first as? BaseView
-        itemView.addSubview(moodView!)
+        let moodView = Bundle.main.loadNibNamed("MoodMeter", owner: self, options: nil)?.first as? MoodMeter
+        moodView?.initViews()
+        view.addSubview(moodView!)
     } else if index == 0 {
         let streakView = Bundle.main.loadNibNamed("Streak", owner: self, options: nil)?.first as? BaseView
         itemView.addSubview(streakView!)

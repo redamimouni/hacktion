@@ -88,7 +88,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="hellYeah" destination="zCL-2f-RKJ" id="ocv-Yc-ULO"/>

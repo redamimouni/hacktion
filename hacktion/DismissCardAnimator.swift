@@ -60,16 +60,11 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
         NSLayoutConstraint.activate([animatedContainerTopConstraint, animatedContainerWidthConstraint, animatedContainerHeightConstraint])
         
         // Fix weird top inset
-        let topTemporaryFix = screens.cardDetail.cardContentView.topAnchor.constraint(equalTo: cardDetailView.topAnchor)
-        topTemporaryFix.isActive = GlobalConstants.isEnabledWeirdTopInsetsFix
         
         container.layoutIfNeeded()
-        
-        // Force card filling bottom
-        let stretchCardToFillBottom = screens.cardDetail.cardContentView.bottomAnchor.constraint(equalTo: cardDetailView.bottomAnchor)
+    
         
         func animateCardViewBackToPlace() {
-            stretchCardToFillBottom.isActive = true
             //screens.cardDetail.isFontStateHighlighted = false
             // Back to identity
             // NOTE: Animated container view in a way, helps us to not messing up `transform` with `AutoLayout` animation.
@@ -91,12 +86,7 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
                 //screens.cardDetail.isFontStateHighlighted = true
                 
                 // Remove temporary fixes if not success!
-                topTemporaryFix.isActive = false
-                stretchCardToFillBottom.isActive = false
-                
-                cardDetailView.removeConstraint(topTemporaryFix)
-                cardDetailView.removeConstraint(stretchCardToFillBottom)
-                
+                                
                 container.removeConstraints(container.constraints)
                 
                 container.addSubview(cardDetailView)

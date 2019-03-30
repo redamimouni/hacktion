@@ -45,6 +45,10 @@
 		ABF489C9224FEEB8000D6378 /* CardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489C8224FEEB8000D6378 /* CardPresentationController.swift */; };
 		ABF489CB224FF26A000D6378 /* CardContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489CA224FF26A000D6378 /* CardContentView.xib */; };
 		ABF489CD224FF438000D6378 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489CC224FF438000D6378 /* BaseView.swift */; };
+		ABF489D022500050000D6378 /* StreakDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489CF22500050000D6378 /* StreakDetail.xib */; };
+		ABF489D222501329000D6378 /* StreakDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489D122501329000D6378 /* StreakDetail.swift */; };
+		ABF489D422501829000D6378 /* PanicButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF489D322501829000D6378 /* PanicButton.xib */; };
+		ABF489D62250194A000D6378 /* PanicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF489D52250194A000D6378 /* PanicButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,10 @@
 		ABF489C8224FEEB8000D6378 /* CardPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPresentationController.swift; sourceTree = "<group>"; };
 		ABF489CA224FF26A000D6378 /* CardContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardContentView.xib; sourceTree = "<group>"; };
 		ABF489CC224FF438000D6378 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		ABF489CF22500050000D6378 /* StreakDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreakDetail.xib; sourceTree = "<group>"; };
+		ABF489D122501329000D6378 /* StreakDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakDetail.swift; sourceTree = "<group>"; };
+		ABF489D322501829000D6378 /* PanicButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PanicButton.xib; sourceTree = "<group>"; };
+		ABF489D52250194A000D6378 /* PanicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanicButton.swift; sourceTree = "<group>"; };
 		D2B2FE87AEEBACDFCDE5667A /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
 		E978002B3D516925EDC51D60 /* Pods-Pilyumi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.debug.xcconfig"; path = "Target Support Files/Pods-Pilyumi/Pods-Pilyumi.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1466F722818E9EB4CFFE50 /* Pods-Pilyumi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pilyumi/Pods-Pilyumi.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,10 +215,14 @@
 				ABF489A7224FB9BA000D6378 /* MoodMeter.swift */,
 				ABF489AD224FC0BF000D6378 /* Streak.swift */,
 				ABF489B1224FC300000D6378 /* Funfacts.swift */,
+				ABF489D122501329000D6378 /* StreakDetail.swift */,
+				ABF489D52250194A000D6378 /* PanicButton.swift */,
 				ABF489A3224FAC59000D6378 /* CheckinView.xib */,
 				ABF489A9224FB9D9000D6378 /* MoodMeter.xib */,
 				ABF489AF224FC21F000D6378 /* Funfacts.xib */,
 				ABF489AB224FBF64000D6378 /* Streak.xib */,
+				ABF489CF22500050000D6378 /* StreakDetail.xib */,
+				ABF489D322501829000D6378 /* PanicButton.xib */,
 				ABF489B6224FDED8000D6378 /* Extension.swift */,
 			);
 			path = views;
@@ -303,6 +315,7 @@
 				5171847F224FE96B00468D5D /* Nunito-Regular.ttf in Resources */,
 				ABE07112224E9DAA00129199 /* LaunchScreen.storyboard in Resources */,
 				5171848D22500E9800468D5D /* ChatbotMessageTableViewCell.xib in Resources */,
+				ABF489D022500050000D6378 /* StreakDetail.xib in Resources */,
 				ABE0710F224E9DAA00129199 /* Assets.xcassets in Resources */,
 				51718482224FEA2400468D5D /* Nunito-ExtraBold.ttf in Resources */,
 				ABE0710D224E9DA800129199 /* Main.storyboard in Resources */,
@@ -315,6 +328,7 @@
 				ABF489AC224FBF64000D6378 /* Streak.xib in Resources */,
 				ABF489A4224FAC59000D6378 /* CheckinView.xib in Resources */,
 				ABF489B0224FC21F000D6378 /* Funfacts.xib in Resources */,
+				ABF489D422501829000D6378 /* PanicButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +410,9 @@
 				51718487224FFC4100468D5D /* MyMessageTableViewCell.swift in Sources */,
 				51718490225010C200468D5D /* Message.swift in Sources */,
 				ABF489AE224FC0BF000D6378 /* Streak.swift in Sources */,
+				ABF489D62250194A000D6378 /* PanicButton.swift in Sources */,
 				ABF489C9224FEEB8000D6378 /* CardPresentationController.swift in Sources */,
+				ABF489D222501329000D6378 /* StreakDetail.swift in Sources */,
 				ABF489C3224FEC57000D6378 /* CardTransition.swift in Sources */,
 				ABF489B2224FC300000D6378 /* Funfacts.swift in Sources */,
 				ABF489C1224FE924000D6378 /* NibLoadable.swift in Sources */,

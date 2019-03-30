@@ -12,7 +12,6 @@ class CardDetailViewController: StatusBarAnimatableViewController, UIScrollViewD
     
     @IBOutlet weak var scrollView: UIScrollView!
 
-    @IBOutlet weak var cardContentView: CardContentView!
     @IBOutlet weak var cardBottomToRootBottomConstraint: NSLayoutConstraint!
     
     var unhighlightedCardViewModel: CardContentViewModel!
@@ -38,7 +37,9 @@ class CardDetailViewController: StatusBarAnimatableViewController, UIScrollViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        scrollView.layer.cornerRadius = 5
+        let streakDetailView = Bundle.main.loadNibNamed("StreakDetail", owner: self, options: nil)?.first as? StreakDetail
+        scrollView.addSubview(streakDetailView!)
         if GlobalConstants.isEnabledDebugAnimatingViews {
             scrollView.layer.borderWidth = 3
             scrollView.layer.borderColor = UIColor.green.cgColor
@@ -173,7 +174,6 @@ class CardDetailViewController: StatusBarAnimatableViewController, UIScrollViewD
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        scrollView.scrollIndicatorInsets = .init(top: cardContentView.bounds.height, left: 0, bottom: 0, right: 0)
         if GlobalConstants.isEnabledTopSafeAreaInsetsFixOnCardDetailViewController {
             self.additionalSafeAreaInsets = .init(top: max(-view.safeAreaInsets.top,0), left: 0, bottom: 0, right: 0)
         }
