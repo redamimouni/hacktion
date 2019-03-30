@@ -13,6 +13,9 @@
         <array key="Nunito-Bold.ttf">
             <string>Nunito-Bold</string>
         </array>
+        <array key="Nunito-ExtraBold.ttf">
+            <string>Nunito-ExtraBold</string>
+        </array>
         <array key="Nunito-SemiBold.ttf">
             <string>Nunito-SemiBold</string>
         </array>
@@ -82,12 +85,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-Ff-zXx">
                                 <rect key="frame" x="25" y="38.5" width="16" height="22"/>
                                 <state key="normal" image="Menu"/>
+                                <connections>
+                                    <segue destination="RtR-ji-Ul5" kind="presentation" id="oz6-aJ-RWb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.5490196078431373" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="phW-gn-M1R" secondAttribute="trailing" constant="16" id="2Wt-u0-Rba"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="phW-gn-M1R" secondAttribute="trailing" constant="25" id="2Wt-u0-Rba"/>
                             <constraint firstItem="jMw-Ln-qmf" firstAttribute="top" secondItem="phW-gn-M1R" secondAttribute="bottom" id="ASq-9n-9sZ"/>
                             <constraint firstItem="jMw-Ln-qmf" firstAttribute="centerX" secondItem="phW-gn-M1R" secondAttribute="centerX" id="DpA-cM-PBA"/>
                             <constraint firstItem="qaR-Um-eLu" firstAttribute="top" secondItem="jMw-Ln-qmf" secondAttribute="bottom" constant="35" id="Mk3-Ho-bTx"/>
@@ -103,7 +109,6 @@
                             <constraint firstItem="phW-gn-M1R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q1B-v6-P87"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oux-qR-Nd7" secondAttribute="bottom" constant="20" id="tyn-PL-cEX"/>
                             <constraint firstItem="Oux-qR-Nd7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uBU-nA-XeU"/>
-                            <constraint firstItem="phW-gn-M1R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xnK-v8-vaT"/>
                             <constraint firstItem="jMw-Ln-qmf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zJT-P6-8QL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -118,8 +123,81 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Panic Mode View Controller-->
+        <scene sceneID="nfL-T1-CL0">
+            <objects>
+                <viewController id="RtR-ji-Ul5" customClass="PanicModeViewController" customModule="Pilyumi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmg-Cd-As2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-mo-TOp">
+                                <rect key="frame" x="25" y="43" width="15" height="22"/>
+                                <state key="normal" image="Close"/>
+                                <connections>
+                                    <action selector="close" destination="RtR-ji-Ul5" eventType="touchUpInside" id="sig-6h-Tl7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panic mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9e-Fh-kZ5">
+                                <rect key="frame" x="133" y="40" width="109.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito ExtraBold" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.44313725490196076" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="No5-9c-cYQ">
+                                <rect key="frame" x="0.0" y="102.5" width="375" height="564.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyMessageTableViewCell" id="DXg-75-zMg" customClass="MyMessageTableViewCell" customModule="Pilyumi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXg-75-zMg" id="dHG-7K-TSV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RtR-ji-Ul5" id="RuI-wh-qyO"/>
+                                    <outlet property="delegate" destination="RtR-ji-Ul5" id="zuz-nf-xUJ"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-Qr-RMd">
+                                <rect key="frame" x="0.0" y="593" width="375" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="8vs-EB-bCR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="No5-9c-cYQ" firstAttribute="top" secondItem="x9e-Fh-kZ5" secondAttribute="bottom" constant="35" id="6fh-b6-kUa"/>
+                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x9e-Fh-kZ5" secondAttribute="trailing" constant="25" id="7dq-DF-IDI"/>
+                            <constraint firstItem="No5-9c-cYQ" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" id="FM8-Ht-E3m"/>
+                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="bottom" secondItem="KZI-Qr-RMd" secondAttribute="bottom" id="G4u-hl-tXb"/>
+                            <constraint firstItem="JDo-mo-TOp" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" constant="25" id="O3j-VV-zFw"/>
+                            <constraint firstItem="x9e-Fh-kZ5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JDo-mo-TOp" secondAttribute="trailing" constant="25" id="QkX-qW-aRf"/>
+                            <constraint firstItem="KZI-Qr-RMd" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" id="V7H-jj-p4h"/>
+                            <constraint firstItem="x9e-Fh-kZ5" firstAttribute="top" secondItem="Suy-xf-CbJ" secondAttribute="top" constant="20" id="Xgh-fs-OfX"/>
+                            <constraint firstItem="x9e-Fh-kZ5" firstAttribute="centerX" secondItem="Suy-xf-CbJ" secondAttribute="centerX" id="alO-ae-CtW"/>
+                            <constraint firstItem="JDo-mo-TOp" firstAttribute="centerY" secondItem="x9e-Fh-kZ5" secondAttribute="centerY" id="euE-CY-nGE"/>
+                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="bottom" secondItem="No5-9c-cYQ" secondAttribute="bottom" id="fJb-b4-QBJ"/>
+                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" secondItem="KZI-Qr-RMd" secondAttribute="trailing" id="gvJ-Gc-Xqf"/>
+                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" secondItem="No5-9c-cYQ" secondAttribute="trailing" id="zm9-cg-ihu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Suy-xf-CbJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="No5-9c-cYQ" id="05r-sv-Xfa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLu-hJ-p4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="133.5832083958021"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Close" width="15" height="15"/>
         <image name="Menu" width="16" height="14"/>
     </resources>
 </document>

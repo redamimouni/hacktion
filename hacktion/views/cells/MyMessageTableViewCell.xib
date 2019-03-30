@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-SemiBold.ttf">
+            <string>Nunito-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="8wl-1z-6pD" customClass="MyMessageTableViewCell" customModule="Pilyumi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8wl-1z-6pD" id="ApS-62-3TN">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqj-ba-Re0">
+                        <rect key="frame" x="273" y="5" width="77" height="53.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d89-sO-RJA">
+                                <rect key="frame" x="20" y="15" width="37" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito SemiBold" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33725490200000002" green="0.80392156859999997" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="d89-sO-RJA" secondAttribute="bottom" constant="15" id="Ilr-5S-xar"/>
+                            <constraint firstItem="d89-sO-RJA" firstAttribute="leading" secondItem="Eqj-ba-Re0" secondAttribute="leading" constant="20" id="crN-Iy-ZQR"/>
+                            <constraint firstItem="d89-sO-RJA" firstAttribute="top" secondItem="Eqj-ba-Re0" secondAttribute="top" constant="15" id="isz-xU-Ba6"/>
+                            <constraint firstAttribute="trailing" secondItem="d89-sO-RJA" secondAttribute="trailing" constant="20" id="m7N-NB-qvB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Eqj-ba-Re0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ApS-62-3TN" secondAttribute="leading" constant="25" id="ENv-Ys-RLv"/>
+                    <constraint firstItem="Eqj-ba-Re0" firstAttribute="top" secondItem="ApS-62-3TN" secondAttribute="top" constant="5" id="Ykx-DB-ZZ8"/>
+                    <constraint firstAttribute="bottom" secondItem="Eqj-ba-Re0" secondAttribute="bottom" constant="5" id="dJP-oe-oxG"/>
+                    <constraint firstAttribute="trailing" secondItem="Eqj-ba-Re0" secondAttribute="trailing" constant="25" id="n1a-PW-4R2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bubbleView" destination="Eqj-ba-Re0" id="T6k-7n-hLi"/>
+                <outlet property="messageLabel" destination="d89-sO-RJA" id="EWw-Bk-9jq"/>
+            </connections>
+            <point key="canvasLocation" x="95.200000000000003" y="91.754122938530742"/>
+        </tableViewCell>
+    </objects>
+</document>
