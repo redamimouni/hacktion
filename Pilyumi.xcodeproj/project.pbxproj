@@ -17,6 +17,7 @@
 		5171848D22500E9800468D5D /* ChatbotMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5171848B22500E9800468D5D /* ChatbotMessageTableViewCell.xib */; };
 		51718490225010C200468D5D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5171848F225010C200468D5D /* Message.swift */; };
 		51718492225010EF00468D5D /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51718491225010EF00468D5D /* MessageSender.swift */; };
+		517184952250242500468D5D /* UIStackView+Remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517184942250242500468D5D /* UIStackView+Remove.swift */; };
 		A6CA4712BF09D3745FD3CA1E /* Pods_Pilyumi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */; };
 		ABE07108224E9DA800129199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07107224E9DA800129199 /* AppDelegate.swift */; };
 		ABE0710A224E9DA800129199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07109224E9DA800129199 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		5171848B22500E9800468D5D /* ChatbotMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatbotMessageTableViewCell.xib; sourceTree = "<group>"; };
 		5171848F225010C200468D5D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		51718491225010EF00468D5D /* MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
+		517184942250242500468D5D /* UIStackView+Remove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Remove.swift"; sourceTree = "<group>"; };
 		5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pilyumi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07104224E9DA800129199 /* Pilyumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pilyumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07107224E9DA800129199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,14 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		51718493225023DD00468D5D /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				517184942250242500468D5D /* UIStackView+Remove.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		ABE070FB224E9DA800129199 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 		ABE07106224E9DA800129199 /* hacktion */ = {
 			isa = PBXGroup;
 			children = (
+				51718493225023DD00468D5D /* utils */,
 				5171848E225010AF00468D5D /* models */,
 				5171847C224FE6FB00468D5D /* fonts */,
 				ABF489CE224FF4AB000D6378 /* animationViews */,
@@ -407,6 +418,7 @@
 				51718484224FF47000468D5D /* PanicModeViewController.swift in Sources */,
 				ABF489BB224FE75C000D6378 /* CardDetailViewController.swift in Sources */,
 				ABF489A6224FAF66000D6378 /* CheckinView.swift in Sources */,
+				517184952250242500468D5D /* UIStackView+Remove.swift in Sources */,
 				51718487224FFC4100468D5D /* MyMessageTableViewCell.swift in Sources */,
 				51718490225010C200468D5D /* Message.swift in Sources */,
 				ABF489AE224FC0BF000D6378 /* Streak.swift in Sources */,

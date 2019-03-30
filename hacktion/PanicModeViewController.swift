@@ -24,6 +24,7 @@ class PanicModeViewController: UIViewController {
   
   private var lastMessageIndex = 0
   private var animationDelay = 0.0
+  private var step = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -40,7 +41,8 @@ class PanicModeViewController: UIViewController {
     guard let answers = messages[index].possibleAnswers else {
       return
     }
-    // TODO: remove all stack subviews
+    answersStackView.removeAllArrangedSubviews()
+    
     answers.forEach { answer in
       let button = UIButton(frame: CGRect(x: 0, y: 0, width: answersStackView.bounds.width, height: answersStackView.bounds.height))
       button.setTitle(answer, for: .normal)
@@ -51,6 +53,7 @@ class PanicModeViewController: UIViewController {
       button.addTarget(self, action: #selector(answerQuestion(_:)), for: .touchUpInside)
       answersStackView.addArrangedSubview(button)
     }
+    
     answersStackView.isHidden = false
   }
   
@@ -59,9 +62,23 @@ class PanicModeViewController: UIViewController {
     guard let answer = sender.titleLabel?.text else {
       return
     }
-    messages.append(Message(text: answer, sender: .me, possibleAnswers: nil))
-    tableView.insertRows(at: [IndexPath(row: lastMessageIndex + 1, section: 0)], with: .automatic)
-    // TODO: update lastMessageIndex
+    
+    insertMessage(Message(text: answer, sender: .me, possibleAnswers: nil))
+    displayNextChatbotMessages()
+  }
+  
+  private func displayNextChatbotMessages() {
+    step += 1
+    if (step == 1) {
+      insertMessage(Message(text: "Great", sender: .chatbot, possibleAnswers: nil))
+      insertMessage(Message(text: "And your last period ended 3 days ago right ?", sender: .chatbot, possibleAnswers: ["Yes", "No"]))
+    }
+  }
+  
+  private func insertMessage(_ message: Message) {
+    let row = tableView.numberOfRows(inSection: 0)
+    messages.append(message)
+    tableView.insertRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
   }
   
   @IBAction func close() {
