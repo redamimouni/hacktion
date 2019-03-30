@@ -13,20 +13,21 @@ class PanicModeViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   private let myMessageIdentifier = "MyMessageTableViewCell"
+  private let chatbotMessageIdentifier = "ChatbotMessageTableViewCell"
   
-  private let messages = [
-    "Hello",
-    "Hello",
-    "Hello",
-    "Hello",
-    "Hello",
-    "Hello"
+  private let messages: [Message] = [
+    Message(text: "😱  Ooops...", sender: .me),
+    Message(text: "Hey Lola ! Don’t panic ! 😊 I will get you through the different steps", sender: .chatbot),
+    Message(text: "First of all, you confirm that you are taking the Yasmin combined contraceptive pill ?", sender: .chatbot)
   ]
+  
+  private var lastMessageIndex = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     tableView.register(UINib(nibName: myMessageIdentifier, bundle: nil), forCellReuseIdentifier: myMessageIdentifier)
+    tableView.register(UINib(nibName: chatbotMessageIdentifier, bundle: nil), forCellReuseIdentifier: chatbotMessageIdentifier)
     tableView.estimatedRowHeight = 60
     tableView.rowHeight = UITableView.automaticDimension
   }
@@ -46,14 +47,25 @@ extension PanicModeViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: myMessageIdentifier, for: indexPath) as! MyMessageTableViewCell
-    cell.message = messages[indexPath.row]//"😱  Ooops..."
-    return cell
+    let message = messages[indexPath.row]
+    if (message.sender == .me) {
+      let cell = tableView.dequeueReusableCell(withIdentifier: myMessageIdentifier, for: indexPath) as! MyMessageTableViewCell
+      cell.message = message.text
+      return cell
+    } else if (message.sender == .chatbot) {
+      let cell = tableView.dequeueReusableCell(withIdentifier: chatbotMessageIdentifier, for: indexPath) as! ChatbotMessageTableViewCell
+      cell.message = message.text
+      return cell
+    }
+    return UITableViewCell()
   }
 }
 
 extension PanicModeViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    guard indexPath.row > lastMessageIndex else {
+      return
+    }
     cell.transform = CGAffineTransform(translationX: 0, y: tableView.bounds.height)
 
     UIView.animate(
@@ -63,5 +75,9 @@ extension PanicModeViewController: UITableViewDelegate {
       animations: {
         cell.transform = CGAffineTransform(translationX: 0, y: 0)
     })
+    
+    if (lastMessageIndex < indexPath.row) {
+      lastMessageIndex = indexPath.row
+    }
   }
 }
