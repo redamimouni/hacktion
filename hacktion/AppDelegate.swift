@@ -17,6 +17,7 @@ UNUserNotificationCenterDelegate,
 MessagingDelegate{
 
   var window: UIWindow?
+  var launcheShortCutItem: UIApplicationShortcutItem?
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -37,6 +38,9 @@ MessagingDelegate{
     }
     Messaging.messaging().delegate = self
     application.registerForRemoteNotifications()
+    if let shortcutitem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+      launcheShortCutItem = shortcutitem
+    }
     return true
   }
 
@@ -56,7 +60,16 @@ MessagingDelegate{
 
   func applicationDidBecomeActive(_ application: UIApplication) {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    guard let shortcutitem = launcheShortCutItem else { return }
+    _ = handleShortcutItem(item: shortcutitem)
+    launcheShortCutItem = nil
   }
+  
+  func handleShortcutItem(item: UIApplicationShortcutItem) -> Bool {
+    var handled = false
+    return handled
+  }
+  
 
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
@@ -64,6 +77,10 @@ MessagingDelegate{
   
   func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
     print("fcmToken: \(fcmToken)")
+  }
+  
+  func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+    completionHandler(handleShortcutItem(item: shortcutItem))
   }
 }
 
