@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-SemiBold.ttf">
+            <string>Nunito-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,36 +21,41 @@
             <rect key="frame" x="0.0" y="0.0" width="244" height="239"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYt-ff-Pft">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check-in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYt-ff-Pft">
                     <rect key="frame" x="70" y="42" width="104" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito SemiBold" pointSize="17"/>
                     <color key="textColor" red="0.41176470588235292" green="0.21568627450980393" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, did you take it today ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddp-Ab-0MI">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hey, did you take it today ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddp-Ab-0MI">
                     <rect key="frame" x="16" y="69" width="212" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito SemiBold" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK7-w9-UEp">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🍬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK7-w9-UEp">
                     <rect key="frame" x="110" y="13" width="23" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCL-2f-RKJ">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCL-2f-RKJ">
                     <rect key="frame" x="16" y="100" width="212" height="28"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito SemiBold" pointSize="13"/>
                     <state key="normal" title="💪 Hell yeah">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-Cq-2vD">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-Cq-2vD">
                     <rect key="frame" x="16" y="145" width="212" height="28"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito SemiBold" pointSize="13"/>
                     <state key="normal" title="⏳ Remind me later">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
@@ -56,9 +66,10 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK8-eT-2B1">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK8-eT-2B1">
                     <rect key="frame" x="16" y="190" width="212" height="28"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito SemiBold" pointSize="13"/>
                     <state key="normal" title="😱 Ooops ...">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
@@ -71,32 +82,6 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zK8-eT-2B1" secondAttribute="bottom" constant="21" id="43F-A4-Og3"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zCL-2f-RKJ" secondAttribute="trailing" constant="16" id="4WY-Tq-jnn"/>
-                <constraint firstItem="WUA-Cq-2vD" firstAttribute="top" secondItem="zCL-2f-RKJ" secondAttribute="bottom" constant="17" id="53H-Na-uhi"/>
-                <constraint firstItem="WUA-Cq-2vD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7Lq-8Y-Bod"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dK7-w9-UEp" secondAttribute="trailing" constant="111" id="9h1-SI-r1G"/>
-                <constraint firstItem="tYt-ff-Pft" firstAttribute="top" secondItem="dK7-w9-UEp" secondAttribute="bottom" constant="8" id="BUK-BA-1fc"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ddp-Ab-0MI" secondAttribute="trailing" constant="16" id="GP5-vc-yV0"/>
-                <constraint firstItem="ddp-Ab-0MI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="How-eP-UsE"/>
-                <constraint firstItem="zK8-eT-2B1" firstAttribute="top" secondItem="WUA-Cq-2vD" secondAttribute="bottom" constant="17" id="ILQ-Ph-a3d"/>
-                <constraint firstItem="zCL-2f-RKJ" firstAttribute="top" secondItem="ddp-Ab-0MI" secondAttribute="bottom" constant="11" id="NqC-Fe-h9b"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zK8-eT-2B1" secondAttribute="trailing" constant="16" id="PjW-of-zyR"/>
-                <constraint firstItem="tYt-ff-Pft" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="70" id="S4T-uM-V4L"/>
-                <constraint firstItem="zK8-eT-2B1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="U0L-wP-V15"/>
-                <constraint firstItem="ddp-Ab-0MI" firstAttribute="top" secondItem="tYt-ff-Pft" secondAttribute="bottom" constant="7" id="Us2-Qw-gz5"/>
-                <constraint firstItem="dK7-w9-UEp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="13" id="Vyh-qQ-3aA"/>
-                <constraint firstItem="WUA-Cq-2vD" firstAttribute="top" secondItem="zCL-2f-RKJ" secondAttribute="bottom" constant="17" id="gHM-P6-ntn"/>
-                <constraint firstItem="ddp-Ab-0MI" firstAttribute="top" secondItem="tYt-ff-Pft" secondAttribute="bottom" constant="7" id="h2l-FG-PFx"/>
-                <constraint firstItem="dK7-w9-UEp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="110" id="hIs-Vi-9gL"/>
-                <constraint firstItem="zCL-2f-RKJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="iiQ-eS-rvk"/>
-                <constraint firstItem="zK8-eT-2B1" firstAttribute="top" secondItem="WUA-Cq-2vD" secondAttribute="bottom" constant="17" id="kpO-nV-e8o"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tYt-ff-Pft" secondAttribute="trailing" constant="70" id="mR2-Bg-y9I"/>
-                <constraint firstItem="zCL-2f-RKJ" firstAttribute="top" secondItem="ddp-Ab-0MI" secondAttribute="bottom" constant="11" id="mb6-dx-DgR"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WUA-Cq-2vD" secondAttribute="trailing" constant="16" id="ncu-ui-O7J"/>
-                <constraint firstItem="tYt-ff-Pft" firstAttribute="top" secondItem="dK7-w9-UEp" secondAttribute="bottom" constant="8" id="y2Z-gh-Yby"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <userDefinedRuntimeAttributes>
