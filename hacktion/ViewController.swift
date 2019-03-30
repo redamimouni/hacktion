@@ -99,11 +99,11 @@ extension ViewController: iCarouselDataSource {
     let itemView = UIView(frame: CGRect(x: 0, y: 0, width: carousel.frame.width - marginX * 2, height: carousel.frame.height))
     if index == 2 {
         let panicButtonView = Bundle.main.loadNibNamed("PanicButton", owner: self, options: nil)?.first as? PanicButton
-        view.addSubview(panicButtonView!)
+        itemView.addSubview(panicButtonView!)
     } else if index == 1 {
         let moodView = Bundle.main.loadNibNamed("MoodMeter", owner: self, options: nil)?.first as? MoodMeter
         moodView?.initViews()
-        view.addSubview(moodView!)
+        itemView.addSubview(moodView!)
     } else if index == 0 {
         let streakView = Bundle.main.loadNibNamed("Streak", owner: self, options: nil)?.first as? BaseView
         itemView.addSubview(streakView!)
