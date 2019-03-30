@@ -45,7 +45,13 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xOl-wj-evE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wcr-4g-k2Q"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oux-qR-Nd7" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="407" width="375" height="240"/>
@@ -86,6 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="calendarView" destination="qaR-Um-eLu" id="1Ex-CP-aAZ"/>
                         <outlet property="carouselView" destination="Oux-qR-Nd7" id="avo-hq-DPs"/>
                         <outlet property="countdownLabel" destination="phW-gn-M1R" id="Dl0-eS-aTT"/>
                     </connections>

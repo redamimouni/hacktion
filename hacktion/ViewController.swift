@@ -7,15 +7,35 @@
 //
 
 import UIKit
+import FSCalendar
 import iCarousel
 
 class ViewController: UIViewController {
 
   @IBOutlet weak var countdownLabel: UILabel!
+  @IBOutlet weak var calendarView: FSCalendar!
   @IBOutlet weak var carouselView: iCarousel!
+  
+  private static let dateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "YYYY-MM-dd"
+    return dateFormatter
+  }()
   
   private var timer: Timer!
   private var nextPillDate: Date!
+  private let validatedPillDates: [Date] = [
+    dateFormatter.date(from: "2019-03-01")!,
+    dateFormatter.date(from: "2019-03-02")!,
+    dateFormatter.date(from: "2019-03-03")!,
+    dateFormatter.date(from: "2019-03-04")!,
+    dateFormatter.date(from: "2019-03-05")!,
+    dateFormatter.date(from: "2019-03-06")!,
+    dateFormatter.date(from: "2019-03-07")!,
+    dateFormatter.date(from: "2019-03-08")!,
+    dateFormatter.date(from: "2019-03-09")!,
+    dateFormatter.date(from: "2019-03-10")!
+  ]
   
   private let colors: [UIColor] = [
     UIColor(red: 1/255, green: 140/255, blue: 203/255, alpha: 1),
@@ -28,6 +48,10 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     nextPillDate = Date(timeIntervalSinceNow: 5000)
+    
+    validatedPillDates.forEach { date in
+      calendarView.select(date)
+    }
     
     carouselView.reloadData()
     carouselView.type = .linear
@@ -84,4 +108,10 @@ extension ViewController: iCarouselDelegate {
   func carouselCurrentItemIndexDidChange(_ carousel: iCarousel!) {
     view.backgroundColor = colors[carousel.currentItemIndex]
   }
+}
+
+extension ViewController: FSCalendarDataSource {
+}
+
+extension ViewController: FSCalendarDelegate {
 }
