@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5171847F224FE96B00468D5D /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5171847E224FE75F00468D5D /* Nunito-Regular.ttf */; };
+		51718480224FE96D00468D5D /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5171847D224FE75F00468D5D /* Nunito-Bold.ttf */; };
+		51718482224FEA2400468D5D /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51718481224FEA2200468D5D /* Nunito-ExtraBold.ttf */; };
 		A6CA4712BF09D3745FD3CA1E /* Pods_Pilyumi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */; };
 		ABE07108224E9DA800129199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07107224E9DA800129199 /* AppDelegate.swift */; };
 		ABE0710A224E9DA800129199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07109224E9DA800129199 /* ViewController.swift */; };
@@ -27,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		24DE54A3412A0091D13106DF /* Pods-Pilyumi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pilyumi.release.xcconfig"; path = "Target Support Files/Pods-Pilyumi/Pods-Pilyumi.release.xcconfig"; sourceTree = "<group>"; };
+		5171847D224FE75F00468D5D /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		5171847E224FE75F00468D5D /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		51718481224FEA2200468D5D /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pilyumi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07104224E9DA800129199 /* Pilyumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pilyumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07107224E9DA800129199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,10 +80,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5171847C224FE6FB00468D5D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				51718481224FEA2200468D5D /* Nunito-ExtraBold.ttf */,
+				5171847D224FE75F00468D5D /* Nunito-Bold.ttf */,
+				5171847E224FE75F00468D5D /* Nunito-Regular.ttf */,
+				ABF489B4224FCED5000D6378 /* Nunito-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		ABE070FB224E9DA800129199 = {
 			isa = PBXGroup;
 			children = (
-				ABF489B4224FCED5000D6378 /* Nunito-SemiBold.ttf */,
 				ABE07106224E9DA800129199 /* hacktion */,
 				ABE07105224E9DA800129199 /* Products */,
 				316D69F2EEC5D70B06E789BC /* Pods */,
@@ -96,6 +112,7 @@
 		ABE07106224E9DA800129199 /* hacktion */ = {
 			isa = PBXGroup;
 			children = (
+				5171847C224FE6FB00468D5D /* fonts */,
 				ABF489A2224FAC1F000D6378 /* views */,
 				ABF4899F224F6F8C000D6378 /* hacktion.entitlements */,
 				ABE07107224E9DA800129199 /* AppDelegate.swift */,
@@ -114,8 +131,8 @@
 			children = (
 				ABF489A3224FAC59000D6378 /* CheckinView.xib */,
 				ABF489A5224FAF66000D6378 /* CheckinView.swift */,
-				ABF489A7224FB9BA000D6378 /* MoodMeter.swift */,
 				ABF489A9224FB9D9000D6378 /* MoodMeter.xib */,
+				ABF489A7224FB9BA000D6378 /* MoodMeter.swift */,
 				ABF489AB224FBF64000D6378 /* Streak.xib */,
 				ABF489AD224FC0BF000D6378 /* Streak.swift */,
 				ABF489AF224FC21F000D6378 /* Funfacts.xib */,
@@ -197,11 +214,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5171847F224FE96B00468D5D /* Nunito-Regular.ttf in Resources */,
 				ABE07112224E9DAA00129199 /* LaunchScreen.storyboard in Resources */,
 				ABE0710F224E9DAA00129199 /* Assets.xcassets in Resources */,
+				51718482224FEA2400468D5D /* Nunito-ExtraBold.ttf in Resources */,
 				ABE0710D224E9DA800129199 /* Main.storyboard in Resources */,
 				ABF489B5224FCED5000D6378 /* Nunito-SemiBold.ttf in Resources */,
 				ABF489A1224F7040000D6378 /* GoogleService-Info.plist in Resources */,
+				51718480224FE96D00468D5D /* Nunito-Bold.ttf in Resources */,
 				ABF489AA224FB9D9000D6378 /* MoodMeter.xib in Resources */,
 				ABF489AC224FBF64000D6378 /* Streak.xib in Resources */,
 				ABF489A4224FAC59000D6378 /* CheckinView.xib in Resources */,

@@ -20,6 +20,13 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Nunito-Regular</string>
+		<string>Nunito-SemiBold</string>
+		<string>Nunito-Bold</string>
+		<string>Nunito-ExtraBold</string>
+	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
@@ -42,10 +49,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Nunito-SemiBold</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

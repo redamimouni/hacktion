@@ -58,6 +58,9 @@ class ViewController: UIViewController {
     
     nextPillDate = Date(timeIntervalSinceNow: 5000)
     
+    calendarView.appearance.headerTitleFont = UIFont(name: "Nunito-ExtraBold", size: 20)
+    calendarView.appearance.weekdayFont = UIFont(name: "Nunito-Bold", size: 12)
+    calendarView.appearance.titleFont = UIFont(name: "Nunito-Bold", size: 12)
     calendarView.clipsToBounds = true
     
     carouselView.reloadData()
