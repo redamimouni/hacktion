@@ -8,5 +8,6 @@ target 'Pilyumi' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'iCarousel', '1.8'
+  pod 'FSCalendar', '2.7.9'
 
 end
