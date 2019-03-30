@@ -13,6 +13,7 @@
 		ABE0710D224E9DA800129199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE0710B224E9DA800129199 /* Main.storyboard */; };
 		ABE0710F224E9DAA00129199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE0710E224E9DAA00129199 /* Assets.xcassets */; };
 		ABE07112224E9DAA00129199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE07110224E9DAA00129199 /* LaunchScreen.storyboard */; };
+		ABF489A1224F7040000D6378 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF489A0224F7040000D6378 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		ABE0710E224E9DAA00129199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE07111224E9DAA00129199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABE07113224E9DAA00129199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF4899F224F6F8C000D6378 /* hacktion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hacktion.entitlements; sourceTree = "<group>"; };
+		ABF489A0224F7040000D6378 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D22827DEC6D58383AE53D0B7 /* Pods-hacktion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hacktion.release.xcconfig"; path = "Pods/Target Support Files/Pods-hacktion/Pods-hacktion.release.xcconfig"; sourceTree = "<group>"; };
 		E99DB009A375E828CEB6D885 /* Pods-hacktion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hacktion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hacktion/Pods-hacktion.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,12 +64,14 @@
 		ABE07106224E9DA800129199 /* hacktion */ = {
 			isa = PBXGroup;
 			children = (
+				ABF4899F224F6F8C000D6378 /* hacktion.entitlements */,
 				ABE07107224E9DA800129199 /* AppDelegate.swift */,
 				ABE07109224E9DA800129199 /* ViewController.swift */,
 				ABE0710B224E9DA800129199 /* Main.storyboard */,
 				ABE0710E224E9DAA00129199 /* Assets.xcassets */,
 				ABE07110224E9DAA00129199 /* LaunchScreen.storyboard */,
 				ABE07113224E9DAA00129199 /* Info.plist */,
+				ABF489A0224F7040000D6378 /* GoogleService-Info.plist */,
 			);
 			path = hacktion;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 				ABE07100224E9DA800129199 /* Sources */,
 				ABE07101224E9DA800129199 /* Frameworks */,
 				ABE07102224E9DA800129199 /* Resources */,
+				C71255F7F78F77BB53F1FF0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,6 +127,11 @@
 				TargetAttributes = {
 					ABE07103224E9DA800129199 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -150,6 +161,7 @@
 				ABE07112224E9DAA00129199 /* LaunchScreen.storyboard in Resources */,
 				ABE0710F224E9DAA00129199 /* Assets.xcassets in Resources */,
 				ABE0710D224E9DA800129199 /* Main.storyboard in Resources */,
+				ABF489A1224F7040000D6378 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +188,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C71255F7F78F77BB53F1FF0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-hacktion/Pods-hacktion-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hacktion/Pods-hacktion-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -333,6 +371,7 @@
 			baseConfigurationReference = E99DB009A375E828CEB6D885 /* Pods-hacktion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = hacktion/hacktion.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MA98J2NRQ;
 				INFOPLIST_FILE = hacktion/Info.plist;
@@ -340,7 +379,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.octo.hacktion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.octo.pilyumi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -352,6 +391,7 @@
 			baseConfigurationReference = D22827DEC6D58383AE53D0B7 /* Pods-hacktion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = hacktion/hacktion.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MA98J2NRQ;
 				INFOPLIST_FILE = hacktion/Info.plist;
@@ -359,7 +399,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.octo.hacktion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.octo.pilyumi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
