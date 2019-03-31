@@ -216,11 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				51718485224FFC1000468D5D /* cells */,
-				ABF489A3224FAC59000D6378 /* CheckinView.xib */,
-				ABF489A5224FAF66000D6378 /* CheckinView.swift */,
-				ABF489A9224FB9D9000D6378 /* MoodMeter.xib */,
-				ABF489A7224FB9BA000D6378 /* MoodMeter.swift */,
-				ABF489AB224FBF64000D6378 /* Streak.xib */,
 				ABF489CC224FF438000D6378 /* BaseView.swift */,
 				ABF489A5224FAF66000D6378 /* CheckinView.swift */,
 				ABF489A7224FB9BA000D6378 /* MoodMeter.swift */,

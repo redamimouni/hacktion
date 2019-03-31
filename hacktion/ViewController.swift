@@ -86,6 +86,24 @@ private var transition: CardTransition?
     let dateComponents = Calendar.current.dateComponents([.hour, .minute, .second], from: currentDate, to: nextPillDate)
     countdownLabel.text = String(format: "%02d:%02d:%02d", dateComponents.hour!, dateComponents.minute!, dateComponents.second!)
   }
+    
+    func showHey() {
+        print("message")
+        let checkinView = Bundle.main.loadNibNamed("CheckinView", owner: self, options: nil)?.first as? CheckinView
+        checkinView?.initViews(delegate: self)
+        checkinView?.tag = 999
+        self.view.addSubview(checkinView!)
+    }
+    
+    func hideView() {
+        let view = self.view.viewWithTag(999)
+        view?.removeFromSuperview()
+    }
+    
+    func hellYeah() {
+        let view = self.view.viewWithTag(999)
+        view?.removeFromSuperview()
+    }
 }
 
 extension ViewController: iCarouselDataSource {

@@ -78,6 +78,11 @@ MessagingDelegate{
   func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
     print("fcmToken: \(fcmToken)")
   }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("message")
+        (window?.rootViewController as! ViewController).showHey()
+    }
   
   func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
     completionHandler(handleShortcutItem(item: shortcutItem))

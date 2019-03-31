@@ -8,12 +8,14 @@
 
 import UIKit
 
-class CheckinView: BaseView {
+class CheckinView: UIView {
     @IBOutlet var hellYeah: UIButton!
     @IBOutlet var remindMe: UIButton!
     @IBOutlet var oops: UIButton!
     
-    func initViews() {
+    var delegate: ViewController!
+    
+    func initViews(delegate: ViewController) {
         self.hellYeah?.layer.borderColor = UIColor.lightGray.cgColor
         self.hellYeah?.layer.borderWidth = 1
         self.hellYeah?.layer.cornerRadius = 5
@@ -25,5 +27,14 @@ class CheckinView: BaseView {
         self.oops?.layer.borderColor = UIColor.lightGray.cgColor
         self.oops?.layer.borderWidth = 1
         self.oops?.layer.cornerRadius = 5
+        self.delegate = delegate
+    }
+    
+    @IBAction func panicButton() {
+        delegate.hideView()
+    }
+    
+    @IBAction func hellYeahhButton() {
+        delegate.hellYeah()
     }
 }
