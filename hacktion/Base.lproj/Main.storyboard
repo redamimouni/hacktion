@@ -83,7 +83,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-Ff-zXx">
-                                <rect key="frame" x="25" y="35.5" width="32" height="28"/>
+                                <rect key="frame" x="25" y="38.5" width="16" height="22"/>
                                 <state key="normal" image="menu"/>
                                 <connections>
                                     <segue destination="RtR-ji-Ul5" kind="presentation" id="oz6-aJ-RWb"/>
@@ -126,13 +126,13 @@
         <!--Panic Mode View Controller-->
         <scene sceneID="nfL-T1-CL0">
             <objects>
-                <viewController id="RtR-ji-Ul5" customClass="PanicModeViewController" customModule="Pilyumi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="panicvc" id="RtR-ji-Ul5" customClass="PanicModeViewController" customModule="Pilyumi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kmg-Cd-As2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-mo-TOp">
-                                <rect key="frame" x="25" y="39" width="30" height="30"/>
+                                <rect key="frame" x="25" y="43" width="15" height="22"/>
                                 <state key="normal" image="close"/>
                                 <connections>
                                     <action selector="close" destination="RtR-ji-Ul5" eventType="touchUpInside" id="sig-6h-Tl7"/>
@@ -282,7 +282,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close" width="30" height="30"/>
-        <image name="menu" width="32" height="28"/>
+        <image name="close" width="15" height="15"/>
+        <image name="menu" width="16" height="14"/>
     </resources>
 </document>
