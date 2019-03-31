@@ -125,6 +125,7 @@ private var transition: CardTransition?
             self.calendarView.reloadData()
             let view = self.view.viewWithTag(999)
             view?.removeFromSuperview()
+            self.nextPillDate = Date(timeIntervalSinceNow: 86400)
         }
     }
 }
