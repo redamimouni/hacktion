@@ -9,5 +9,5 @@ target 'Pilyumi' do
   pod 'Firebase/Messaging'
   pod 'iCarousel', '1.8'
   pod 'FSCalendar', '2.7.9'
-
+  pod 'lottie-ios', '3.0.3'
 end

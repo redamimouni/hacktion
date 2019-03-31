@@ -22,6 +22,7 @@
 		517EF5492250B90200DADBFB /* LocationMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 517EF5472250B90200DADBFB /* LocationMessageTableViewCell.xib */; };
 		517EF54B2250BAFB00DADBFB /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EF54A2250BAFB00DADBFB /* MessageType.swift */; };
 		A6CA4712BF09D3745FD3CA1E /* Pods_Pilyumi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */; };
+		AB1056DF2250C092001AC8B3 /* thumbsup.json in Resources */ = {isa = PBXBuildFile; fileRef = AB1056DE2250C091001AC8B3 /* thumbsup.json */; };
 		ABE07108224E9DA800129199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07107224E9DA800129199 /* AppDelegate.swift */; };
 		ABE0710A224E9DA800129199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07109224E9DA800129199 /* ViewController.swift */; };
 		ABE0710D224E9DA800129199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE0710B224E9DA800129199 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		517EF5472250B90200DADBFB /* LocationMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationMessageTableViewCell.xib; sourceTree = "<group>"; };
 		517EF54A2250BAFB00DADBFB /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
 		5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pilyumi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB1056DE2250C091001AC8B3 /* thumbsup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thumbsup.json; sourceTree = "<group>"; };
 		ABE07104224E9DA800129199 /* Pilyumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pilyumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07107224E9DA800129199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE07109224E9DA800129199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		AB1056DD2250C01C001AC8B3 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				AB1056DE2250C091001AC8B3 /* thumbsup.json */,
+			);
+			path = animation;
+			sourceTree = "<group>";
+		};
 		ABE070FB224E9DA800129199 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 		ABE07106224E9DA800129199 /* hacktion */ = {
 			isa = PBXGroup;
 			children = (
+				AB1056DD2250C01C001AC8B3 /* animation */,
 				51718493225023DD00468D5D /* utils */,
 				5171848E225010AF00468D5D /* models */,
 				5171847C224FE6FB00468D5D /* fonts */,
@@ -339,6 +350,7 @@
 				ABF489A1224F7040000D6378 /* GoogleService-Info.plist in Resources */,
 				51718489224FFC5C00468D5D /* MyMessageTableViewCell.xib in Resources */,
 				51718480224FE96D00468D5D /* Nunito-Bold.ttf in Resources */,
+				AB1056DF2250C092001AC8B3 /* thumbsup.json in Resources */,
 				ABF489AA224FB9D9000D6378 /* MoodMeter.xib in Resources */,
 				ABF489CB224FF26A000D6378 /* CardContentView.xib in Resources */,
 				ABF489AC224FBF64000D6378 /* Streak.xib in Resources */,
@@ -386,6 +398,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -396,6 +409,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

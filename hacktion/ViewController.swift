@@ -9,6 +9,7 @@
 import UIKit
 import FSCalendar
 import iCarousel
+import Lottie
 
 class ViewController: UIViewController {
 
@@ -27,7 +28,7 @@ private var transition: CardTransition?
   private var timer: Timer!
   private var nextPillDate: Date!
   
-  private let validatedPillDates: [Date] = [
+  private var validatedPillDates: [Date] = [
     dateFormatter.date(from: "2019-03-01")!,
     dateFormatter.date(from: "2019-03-02")!,
     dateFormatter.date(from: "2019-03-03")!,
@@ -38,7 +39,21 @@ private var transition: CardTransition?
     dateFormatter.date(from: "2019-03-08")!,
     dateFormatter.date(from: "2019-03-09")!,
     dateFormatter.date(from: "2019-03-15")!,
-    dateFormatter.date(from: "2019-03-16")!
+    dateFormatter.date(from: "2019-03-16")!,
+    dateFormatter.date(from: "2019-03-17")!,
+    dateFormatter.date(from: "2019-03-18")!,
+    dateFormatter.date(from: "2019-03-19")!,
+    dateFormatter.date(from: "2019-03-20")!,
+    dateFormatter.date(from: "2019-03-21")!,
+    dateFormatter.date(from: "2019-03-22")!,
+    dateFormatter.date(from: "2019-03-23")!,
+    dateFormatter.date(from: "2019-03-24")!,
+    dateFormatter.date(from: "2019-03-25")!,
+    dateFormatter.date(from: "2019-03-26")!,
+    dateFormatter.date(from: "2019-03-27")!,
+    dateFormatter.date(from: "2019-03-28")!,
+    dateFormatter.date(from: "2019-03-29")!,
+    dateFormatter.date(from: "2019-03-30")!
   ]
   private let menstruationDates: [Date] = [
     dateFormatter.date(from: "2019-03-10")!,
@@ -68,6 +83,7 @@ private var transition: CardTransition?
     carouselView.reloadData()
     carouselView.type = .linear
     carouselView.currentItemIndex = carouselView.numberOfItems / 2
+    self.showHey()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -88,7 +104,6 @@ private var transition: CardTransition?
   }
     
     func showHey() {
-        print("message")
         let checkinView = Bundle.main.loadNibNamed("CheckinView", owner: self, options: nil)?.first as? CheckinView
         checkinView?.initViews(delegate: self)
         checkinView?.tag = 999
@@ -101,8 +116,16 @@ private var transition: CardTransition?
     }
     
     func hellYeah() {
-        let view = self.view.viewWithTag(999)
-        view?.removeFromSuperview()
+        validatedPillDates.append(ViewController.dateFormatter.date(from: "2019-03-31")!)
+        let starAnimationView = AnimationView(name: "thumbsup")
+        starAnimationView.center = self.view.center
+        self.view.addSubview(starAnimationView)
+        starAnimationView.play { (finished) in
+            starAnimationView.removeFromSuperview()
+            self.calendarView.reloadData()
+            let view = self.view.viewWithTag(999)
+            view?.removeFromSuperview()
+        }
     }
 }
 
