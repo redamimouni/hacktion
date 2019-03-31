@@ -76,6 +76,15 @@ class PanicModeViewController: UIViewController {
       insertMessage(Message(text: "And your last period ended 3 days ago right ?", sender: .chatbot, possibleAnswers: ["Yes", "No"]))
     } else if (step == 2) {
       insertMessage(Message(text: "So how many pill did you forget to take ?", sender: .chatbot, possibleAnswers: ["1", "2", "3", "more"]))
+    } else if (step == 3) {
+      insertMessage(Message(text: "Okay Lola, take yersterday’s pill as soon as possible, even if you have to take 2 today", sender: .chatbot, possibleAnswers: nil))
+      insertMessage(Message(text: "Continue taking your pills normally", sender: .chatbot, possibleAnswers: nil))
+      insertMessage(Message(text: "However, for 7 days, you are not protected. So use condoms if you are having sex, OK?  😊", sender: .chatbot, possibleAnswers: nil))
+      insertMessage(Message(text: "Now... when was the last time you had sex ?", sender: .chatbot, possibleAnswers: ["1-2 days", "< 7 days", "> 7 days"]))
+    } else if (step == 4) {
+      insertMessage(Message(text: "Lola, I’m sorry but there is a chance you could be pregnant", sender: .chatbot, possibleAnswers: nil))
+      insertMessage(Message(text: "The best thing to do now is to take the morning after pill as soon as possible", sender: .chatbot, possibleAnswers: nil))
+      insertMessage(Message(text: "Do you want to know where is the closest, open pharmacy ?", sender: .chatbot, possibleAnswers: ["Yes", "No"]))
     }
   }
   
