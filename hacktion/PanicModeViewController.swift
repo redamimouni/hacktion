@@ -71,7 +71,7 @@ class PanicModeViewController: UIViewController {
       return
     }
     
-    insertMessage(Message(text: answer, sender: .me, possibleAnswers: nil))
+    insertMessages([Message(text: answer, sender: .me, possibleAnswers: nil)])
     
     Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(displayNextChatbotMessages), userInfo: nil, repeats: false)
   }
@@ -117,22 +117,6 @@ class PanicModeViewController: UIViewController {
     numberOfNewMessages = messages.count
     insertMessages(messages)
     stepLastMessageIndex += numberOfNewMessages
-  }
-  
-  private func insertMessage(_ message: Message) {
-    let row = tableView.numberOfRows(inSection: 0)
-    let indexPath = IndexPath(row: row, section: 0)
-    messages.append(message)
-    tableView.beginUpdates()
-    tableView.insertRows(at: [indexPath], with: .automatic)
-    tableView.endUpdates()
-    UIView.animate(
-      withDuration: 1,
-      delay: 0.5,
-      options: [.curveEaseInOut],
-      animations: {
-        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
-    })
   }
   
   private func insertMessages(_ messages: [Message]) {
