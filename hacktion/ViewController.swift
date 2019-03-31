@@ -83,7 +83,6 @@ private var transition: CardTransition?
     carouselView.reloadData()
     carouselView.type = .linear
     carouselView.currentItemIndex = carouselView.numberOfItems / 2
-    self.showHey()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -121,6 +120,11 @@ private var transition: CardTransition?
         self.calendarView.reloadData()
         let view = self.view.viewWithTag(999)
         view?.removeFromSuperview()
+    }
+    
+    func showPanicMode() {
+        let panicVc = storyboard?.instantiateViewController(withIdentifier: "panicvc")
+        self.present(panicVc!, animated: true, completion: nil)
     }
 }
 

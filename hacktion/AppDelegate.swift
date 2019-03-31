@@ -66,8 +66,8 @@ MessagingDelegate{
   }
   
   func handleShortcutItem(item: UIApplicationShortcutItem) -> Bool {
-    var handled = false
-    return handled
+    (window?.rootViewController as! ViewController).showPanicMode()
+    return true
   }
   
 
