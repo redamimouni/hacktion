@@ -98,8 +98,8 @@ private var transition: CardTransition?
       timer.invalidate()
       return
     }
-    let dateComponents = Calendar.current.dateComponents([.hour, .minute, .second], from: currentDate, to: nextPillDate)
-    countdownLabel.text = String(format: "%02d:%02d:%02d", dateComponents.hour!, dateComponents.minute!, dateComponents.second!)
+    let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: currentDate, to: nextPillDate)
+    countdownLabel.text = String(format: "%02d:%02d", dateComponents.hour!, dateComponents.minute!)
   }
     
     func showHey() {
