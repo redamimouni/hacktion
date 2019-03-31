@@ -83,8 +83,8 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-Ff-zXx">
-                                <rect key="frame" x="25" y="38.5" width="16" height="22"/>
-                                <state key="normal" image="Menu"/>
+                                <rect key="frame" x="25" y="35.5" width="32" height="28"/>
+                                <state key="normal" image="menu"/>
                                 <connections>
                                     <segue destination="RtR-ji-Ul5" kind="presentation" id="oz6-aJ-RWb"/>
                                 </connections>
@@ -132,8 +132,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-mo-TOp">
-                                <rect key="frame" x="25" y="43" width="15" height="22"/>
-                                <state key="normal" image="Close"/>
+                                <rect key="frame" x="25" y="39" width="30" height="30"/>
+                                <state key="normal" image="close"/>
                                 <connections>
                                     <action selector="close" destination="RtR-ji-Ul5" eventType="touchUpInside" id="sig-6h-Tl7"/>
                                 </connections>
@@ -202,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLu-hJ-p4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="119"/>
+            <point key="canvasLocation" x="1569" y="134"/>
         </scene>
         <!--Card Detail View Controller-->
         <scene sceneID="phX-pc-Av9">
@@ -270,12 +270,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qaw-sS-8bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="133.5832083958021"/>
+            <point key="canvasLocation" x="858" y="134"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Close" width="15" height="15"/>
-        <image name="Menu" width="16" height="14"/>
-        <image name="close" width="15" height="15"/>
+        <image name="close" width="30" height="30"/>
+        <image name="menu" width="32" height="28"/>
     </resources>
 </document>
