@@ -46,7 +46,7 @@
                     <constraint firstItem="Eqj-ba-Re0" firstAttribute="leading" secondItem="ApS-62-3TN" secondAttribute="leading" constant="25" id="ENv-Ys-RLv"/>
                     <constraint firstItem="Eqj-ba-Re0" firstAttribute="top" secondItem="ApS-62-3TN" secondAttribute="top" constant="5" id="Ykx-DB-ZZ8"/>
                     <constraint firstAttribute="bottom" secondItem="Eqj-ba-Re0" secondAttribute="bottom" constant="5" id="dJP-oe-oxG"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Eqj-ba-Re0" secondAttribute="trailing" constant="120" id="n1a-PW-4R2"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Eqj-ba-Re0" secondAttribute="trailing" constant="100" id="n1a-PW-4R2"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

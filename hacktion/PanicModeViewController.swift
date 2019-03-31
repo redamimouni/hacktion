@@ -19,7 +19,7 @@ class PanicModeViewController: UIViewController {
   
   private var messages: [Message] = [
     Message(text: "😱  Ooops...", sender: .me, possibleAnswers: nil),
-    Message(text: "Hey Lola ! Don’t panic ! 😊 I will get you through the different steps", sender: .chatbot, possibleAnswers: nil),
+    Message(text: "Hey Lola ! Don’t panic ! 😊\nI will get you through the different steps", sender: .chatbot, possibleAnswers: nil),
     Message(text: "First of all, you confirm that you are taking the Yasmin combined contraceptive pill ?", sender: .chatbot, possibleAnswers: ["Yes", "No"])
   ]
   
