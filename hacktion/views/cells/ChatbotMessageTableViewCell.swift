@@ -19,13 +19,8 @@ class ChatbotMessageTableViewCell: UITableViewCell {
     }
   }
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  
-    setup()
-  }
-  
-  private func setup() {
-    bubbleView.layer.cornerRadius = bubbleView.frame.height / 2
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    bubbleView.layer.cornerRadius = 25
   }
 }
