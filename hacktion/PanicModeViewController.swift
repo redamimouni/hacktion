@@ -33,6 +33,7 @@ class PanicModeViewController: UIViewController {
     tableView.register(UINib(nibName: chatbotMessageIdentifier, bundle: nil), forCellReuseIdentifier: chatbotMessageIdentifier)
     tableView.estimatedRowHeight = 60
     tableView.rowHeight = UITableView.automaticDimension
+    tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 80))
     
     answersStackView.isHidden = true
   }
@@ -64,21 +65,32 @@ class PanicModeViewController: UIViewController {
     }
     
     insertMessage(Message(text: answer, sender: .me, possibleAnswers: nil))
-    displayNextChatbotMessages()
+    
+    Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(displayNextChatbotMessages), userInfo: nil, repeats: false)
   }
   
-  private func displayNextChatbotMessages() {
+  @objc private func displayNextChatbotMessages() {
     step += 1
     if (step == 1) {
       insertMessage(Message(text: "Great", sender: .chatbot, possibleAnswers: nil))
       insertMessage(Message(text: "And your last period ended 3 days ago right ?", sender: .chatbot, possibleAnswers: ["Yes", "No"]))
+    } else if (step == 2) {
+      insertMessage(Message(text: "So how many pill did you forget to take ?", sender: .chatbot, possibleAnswers: ["1", "2", "3", "more"]))
     }
   }
   
   private func insertMessage(_ message: Message) {
     let row = tableView.numberOfRows(inSection: 0)
+    let indexPath = IndexPath(row: row, section: 0)
     messages.append(message)
-    tableView.insertRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
+    tableView.insertRows(at: [indexPath], with: .automatic)
+    UIView.animate(
+      withDuration: 1,
+      delay: 0.5,
+      options: [.curveEaseInOut],
+      animations: {
+        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
+    })
   }
   
   @IBAction func close() {
