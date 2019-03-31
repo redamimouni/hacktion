@@ -20,10 +20,11 @@ class PanicModeViewController: UIViewController {
   private var messages: [Message] = [
     Message(text: "😱  Ooops...", sender: .me, possibleAnswers: nil)
   ]
+  private var newMessages: [Message] = []
   
   private var numberOfNewMessages = 0
-  private var stepLastMessageIndex = 0
   private var lastMessageIndex = 0
+  private var stepLastMessageIndex = 0
   private var step = 0
   
   override func viewDidLoad() {
@@ -34,7 +35,7 @@ class PanicModeViewController: UIViewController {
     tableView.register(UINib(nibName: locationMessageIdentifier, bundle: nil), forCellReuseIdentifier: locationMessageIdentifier)
     tableView.estimatedRowHeight = 60
     tableView.rowHeight = UITableView.automaticDimension
-    tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: answersStackView.bounds.height + 30))
+    tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: answersStackView.bounds.height + 30, right: 0)
     
     hideAnswers()
   }
@@ -85,67 +86,69 @@ class PanicModeViewController: UIViewController {
       return
     }
     
-    insertMessages([Message(text: answer, sender: .me, possibleAnswers: nil)])
+    newMessages = [Message(text: answer, sender: .me, possibleAnswers: nil)]
+    numberOfNewMessages = 1
+    displayNextMessage()
+    stepLastMessageIndex += numberOfNewMessages
     
-    Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(displayNextChatbotMessages), userInfo: nil, repeats: false)
+    Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(displayNextChatbotMessages), userInfo: nil, repeats: false)
   }
   
   @objc private func displayNextChatbotMessages() {
-    var messages: [Message] = []
-    
     step += 1
     if (step == 1) {
-      messages = [
+      newMessages = [
         Message(text: "Hey Lola ! Don’t panic ! 😊\nI will get you through the different steps", sender: .chatbot, possibleAnswers: nil),
         Message(text: "First of all, you confirm that you are taking the Yasmin combined contraceptive pill ?", sender: .chatbot, possibleAnswers: ["Yes", "No"])
       ]
     } else if (step == 2) {
-      messages = [
+      newMessages = [
         Message(text: "Great", sender: .chatbot, possibleAnswers: nil),
         Message(text: "And your last period ended 3 days ago right ?", sender: .chatbot, possibleAnswers: ["Yes", "No"])
       ]
     } else if (step == 3) {
-      messages = [
+      newMessages = [
         Message(text: "So how many pill did you forget to take ?", sender: .chatbot, possibleAnswers: ["1", "2", "3", "more"])
       ]
     } else if (step == 4) {
-      messages = [
-        Message(text: "Okay Lola, take yersterday’s pill as soon as possible, even if you have to take 2 today", sender: .chatbot, possibleAnswers: nil),
+      newMessages = [
+        Message(text: "Okay Lola, take yesterday’s pill as soon as possible, even if you have to take 2 today", sender: .chatbot, possibleAnswers: nil),
         Message(text: "Continue taking your pills normally", sender: .chatbot, possibleAnswers: nil),
         Message(text: "However, for 7 days, you are not protected. So use condoms if you are having sex, OK?  😊", sender: .chatbot, possibleAnswers: nil),
         Message(text: "Now... when was the last time you had sex ?", sender: .chatbot, possibleAnswers: ["1-2 days", "< 7 days", "> 7 days"])
       ]
     } else if (step == 5) {
-      messages = [
+      newMessages = [
         Message(text: "Lola, I’m sorry but there is a chance you could be pregnant", sender: .chatbot, possibleAnswers: nil),
         Message(text: "The best thing to do now is to take the morning after pill as soon as possible", sender: .chatbot, possibleAnswers: nil),
         Message(text: "Do you want to know where is the closest, open pharmacy ?", sender: .chatbot, possibleAnswers: ["Yes", "No"])
       ]
     } else if (step == 6) {
-      messages = [
+      newMessages = [
         Message(text: "Ma pharmacie\n1 rue des Tournelles, 75004", sender: .chatbot, type: .location, possibleAnswers: nil),
         Message(text: "If you want to talk to someone about the morning after pill, call 0 800 881 755", sender: .chatbot, possibleAnswers: nil)
       ]
     }
     
-    numberOfNewMessages = messages.count
-    insertMessages(messages)
+    numberOfNewMessages = newMessages.count
+    displayNextMessage()
     stepLastMessageIndex += numberOfNewMessages
   }
   
-  private func insertMessages(_ messages: [Message]) {
-    messages.forEach { message in
-      let row = tableView.numberOfRows(inSection: 0)
-      let indexPath = IndexPath(row: row, section: 0)
-      self.messages.append(message)
-      tableView.insertRows(at: [indexPath], with: .automatic)
-      UIView.animate(
-        withDuration: 1,
-        delay: 0.5,
-        options: [.curveEaseInOut],
-        animations: {
-          self.tableView.scrollToRow(at: indexPath, at: .middle, animated: false)
-      })
+  private func displayNextMessage() {
+    guard let message = newMessages.first else {
+      return
+    }
+    let row = tableView.numberOfRows(inSection: 0)
+    let indexPath = IndexPath(row: row, section: 0)
+    self.messages.append(message)
+    tableView.insertRows(at: [indexPath], with: .automatic)
+    newMessages.removeFirst()
+    if let lastVisibleCell = tableView.visibleCells.last,
+      lastVisibleCell.frame.origin.y + lastVisibleCell.frame.height > tableView.frame.height - tableView.contentInset.bottom {
+      self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    } else {
+      self.displayNextMessage()
     }
   }
   
@@ -205,5 +208,9 @@ extension PanicModeViewController: UITableViewDelegate {
     if (lastMessageIndex < indexPath.row) {
       lastMessageIndex = indexPath.row
     }
+  }
+  
+  func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    displayNextMessage()
   }
 }
