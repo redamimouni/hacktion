@@ -185,11 +185,6 @@
                         <action selector="sharedClicked" destination="iN0-l3-epB" eventType="touchUpInside" id="gij-VW-J1x"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yop-HX-k3Q">
-                    <rect key="frame" x="0.0" y="15" width="47" height="43"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="close"/>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -202,7 +197,6 @@
         </view>
     </objects>
     <resources>
-        <image name="close" width="15" height="15"/>
         <image name="girl1" width="172" height="208"/>
         <image name="girl2" width="222" height="174"/>
         <image name="girl3" width="178" height="192"/>

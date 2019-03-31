@@ -117,16 +117,10 @@ private var transition: CardTransition?
     
     func hellYeah() {
         validatedPillDates.append(ViewController.dateFormatter.date(from: "2019-03-31")!)
-        let starAnimationView = AnimationView(name: "thumbsup")
-        starAnimationView.center = self.view.center
-        self.view.addSubview(starAnimationView)
-        starAnimationView.play { (finished) in
-            starAnimationView.removeFromSuperview()
-            self.calendarView.reloadData()
-            let view = self.view.viewWithTag(999)
-            view?.removeFromSuperview()
-            self.nextPillDate = Date(timeIntervalSinceNow: 86400)
-        }
+        self.nextPillDate = Date(timeIntervalSinceNow: 86400)
+        self.calendarView.reloadData()
+        let view = self.view.viewWithTag(999)
+        view?.removeFromSuperview()
     }
 }
 
