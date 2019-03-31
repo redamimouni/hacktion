@@ -34,7 +34,7 @@ class PanicModeViewController: UIViewController {
     tableView.register(UINib(nibName: locationMessageIdentifier, bundle: nil), forCellReuseIdentifier: locationMessageIdentifier)
     tableView.estimatedRowHeight = 60
     tableView.rowHeight = UITableView.automaticDimension
-    tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 80))
+    tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: answersStackView.bounds.height + 30))
     
     hideAnswers()
   }

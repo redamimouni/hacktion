@@ -83,7 +83,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-Ff-zXx">
-                                <rect key="frame" x="25" y="38.5" width="16" height="22"/>
+                                <rect key="frame" x="25" y="35.5" width="32" height="28"/>
                                 <state key="normal" image="menu"/>
                                 <connections>
                                     <segue destination="RtR-ji-Ul5" kind="presentation" id="oz6-aJ-RWb"/>
@@ -186,7 +186,7 @@
                                         </connections>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-Qr-RMd">
-                                        <rect key="frame" x="25" y="549" width="325" height="44"/>
+                                        <rect key="frame" x="25" y="543" width="325" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </stackView>
                                 </subviews>
@@ -278,7 +278,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close" width="15" height="15"/>
-        <image name="menu" width="16" height="14"/>
+        <image name="close" width="30" height="30"/>
+        <image name="menu" width="32" height="28"/>
     </resources>
 </document>
