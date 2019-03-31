@@ -15,6 +15,7 @@ class PanicModeViewController: UIViewController {
   
   private let myMessageIdentifier = "MyMessageTableViewCell"
   private let chatbotMessageIdentifier = "ChatbotMessageTableViewCell"
+  private let locationMessageIdentifier = "LocationMessageTableViewCell"
   
   private var messages: [Message] = [
     Message(text: "😱  Ooops...", sender: .me, possibleAnswers: nil),
@@ -31,6 +32,7 @@ class PanicModeViewController: UIViewController {
     
     tableView.register(UINib(nibName: myMessageIdentifier, bundle: nil), forCellReuseIdentifier: myMessageIdentifier)
     tableView.register(UINib(nibName: chatbotMessageIdentifier, bundle: nil), forCellReuseIdentifier: chatbotMessageIdentifier)
+    tableView.register(UINib(nibName: locationMessageIdentifier, bundle: nil), forCellReuseIdentifier: locationMessageIdentifier)
     tableView.estimatedRowHeight = 60
     tableView.rowHeight = UITableView.automaticDimension
     tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 80))
@@ -85,6 +87,9 @@ class PanicModeViewController: UIViewController {
       insertMessage(Message(text: "Lola, I’m sorry but there is a chance you could be pregnant", sender: .chatbot, possibleAnswers: nil))
       insertMessage(Message(text: "The best thing to do now is to take the morning after pill as soon as possible", sender: .chatbot, possibleAnswers: nil))
       insertMessage(Message(text: "Do you want to know where is the closest, open pharmacy ?", sender: .chatbot, possibleAnswers: ["Yes", "No"]))
+    } else if (step == 5) {
+      insertMessage(Message(text: "Ma pharmacie\n1 rue des Tournelles, 75004", sender: .chatbot, type: .location, possibleAnswers: nil))
+      insertMessage(Message(text: "If you want to talk to someone about the morning after pill, call 0 800 881 755", sender: .chatbot, possibleAnswers: nil))
     }
   }
   
@@ -123,9 +128,15 @@ extension PanicModeViewController: UITableViewDataSource {
       cell.message = message.text
       return cell
     } else if (message.sender == .chatbot) {
-      let cell = tableView.dequeueReusableCell(withIdentifier: chatbotMessageIdentifier, for: indexPath) as! ChatbotMessageTableViewCell
-      cell.message = message.text
-      return cell
+      if (message.type == .text) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: chatbotMessageIdentifier, for: indexPath) as! ChatbotMessageTableViewCell
+        cell.message = message.text
+        return cell
+      } else if (message.type == .location) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: locationMessageIdentifier, for: indexPath) as! LocationMessageTableViewCell
+        cell.message = message.text
+        return cell
+      }
     }
     return UITableViewCell()
   }

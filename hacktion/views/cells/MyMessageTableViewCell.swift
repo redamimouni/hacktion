@@ -21,6 +21,6 @@ class MyMessageTableViewCell: UITableViewCell {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    bubbleView.layer.cornerRadius = 25
+    bubbleView?.layer.cornerRadius = 25
   }
 }

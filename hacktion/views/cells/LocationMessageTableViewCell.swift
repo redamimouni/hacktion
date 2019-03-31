@@ -1,5 +1,5 @@
 //
-//  ChatbotMessageTableViewCell.swift
+//  LocationMessageTableViewCell.swift
 //  Pilyumi
 //
 //  Created by Mégane Menanteau on 30/03/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatbotMessageTableViewCell: UITableViewCell {
+class LocationMessageTableViewCell: UITableViewCell {
 
   @IBOutlet weak var bubbleView: UIView!
   @IBOutlet weak var messageLabel: UILabel!

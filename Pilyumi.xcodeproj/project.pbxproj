@@ -18,6 +18,9 @@
 		51718490225010C200468D5D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5171848F225010C200468D5D /* Message.swift */; };
 		51718492225010EF00468D5D /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51718491225010EF00468D5D /* MessageSender.swift */; };
 		517184952250242500468D5D /* UIStackView+Remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517184942250242500468D5D /* UIStackView+Remove.swift */; };
+		517EF5482250B90200DADBFB /* LocationMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EF5462250B90200DADBFB /* LocationMessageTableViewCell.swift */; };
+		517EF5492250B90200DADBFB /* LocationMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 517EF5472250B90200DADBFB /* LocationMessageTableViewCell.xib */; };
+		517EF54B2250BAFB00DADBFB /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EF54A2250BAFB00DADBFB /* MessageType.swift */; };
 		A6CA4712BF09D3745FD3CA1E /* Pods_Pilyumi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */; };
 		ABE07108224E9DA800129199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07107224E9DA800129199 /* AppDelegate.swift */; };
 		ABE0710A224E9DA800129199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07109224E9DA800129199 /* ViewController.swift */; };
@@ -65,6 +68,9 @@
 		5171848F225010C200468D5D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		51718491225010EF00468D5D /* MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
 		517184942250242500468D5D /* UIStackView+Remove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Remove.swift"; sourceTree = "<group>"; };
+		517EF5462250B90200DADBFB /* LocationMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMessageTableViewCell.swift; sourceTree = "<group>"; };
+		517EF5472250B90200DADBFB /* LocationMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationMessageTableViewCell.xib; sourceTree = "<group>"; };
+		517EF54A2250BAFB00DADBFB /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
 		5A17CD2E27241CF94471835D /* Pods_Pilyumi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pilyumi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07104224E9DA800129199 /* Pilyumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pilyumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07107224E9DA800129199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +152,8 @@
 				51718486224FFC4100468D5D /* MyMessageTableViewCell.swift */,
 				5171848B22500E9800468D5D /* ChatbotMessageTableViewCell.xib */,
 				5171848A22500E9800468D5D /* ChatbotMessageTableViewCell.swift */,
+				517EF5472250B90200DADBFB /* LocationMessageTableViewCell.xib */,
+				517EF5462250B90200DADBFB /* LocationMessageTableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			children = (
 				5171848F225010C200468D5D /* Message.swift */,
 				51718491225010EF00468D5D /* MessageSender.swift */,
+				517EF54A2250BAFB00DADBFB /* MessageType.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -322,6 +331,7 @@
 				ABE07112224E9DAA00129199 /* LaunchScreen.storyboard in Resources */,
 				5171848D22500E9800468D5D /* ChatbotMessageTableViewCell.xib in Resources */,
 				ABF489D022500050000D6378 /* StreakDetail.xib in Resources */,
+				517EF5492250B90200DADBFB /* LocationMessageTableViewCell.xib in Resources */,
 				ABE0710F224E9DAA00129199 /* Assets.xcassets in Resources */,
 				51718482224FEA2400468D5D /* Nunito-ExtraBold.ttf in Resources */,
 				ABE0710D224E9DA800129199 /* Main.storyboard in Resources */,
@@ -415,6 +425,7 @@
 				ABF489A6224FAF66000D6378 /* CheckinView.swift in Sources */,
 				517184952250242500468D5D /* UIStackView+Remove.swift in Sources */,
 				51718487224FFC4100468D5D /* MyMessageTableViewCell.swift in Sources */,
+				517EF54B2250BAFB00DADBFB /* MessageType.swift in Sources */,
 				51718490225010C200468D5D /* Message.swift in Sources */,
 				ABF489AE224FC0BF000D6378 /* Streak.swift in Sources */,
 				ABF489D62250194A000D6378 /* PanicButton.swift in Sources */,
@@ -422,6 +433,7 @@
 				ABF489D222501329000D6378 /* StreakDetail.swift in Sources */,
 				ABF489C3224FEC57000D6378 /* CardTransition.swift in Sources */,
 				ABF489B2224FC300000D6378 /* Funfacts.swift in Sources */,
+				517EF5482250B90200DADBFB /* LocationMessageTableViewCell.swift in Sources */,
 				ABF489C1224FE924000D6378 /* NibLoadable.swift in Sources */,
 				ABF489BF224FE8FF000D6378 /* CardContentView.swift in Sources */,
 				ABF489B9224FE613000D6378 /* Constants.swift in Sources */,
