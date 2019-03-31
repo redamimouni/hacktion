@@ -83,7 +83,7 @@ private var transition: CardTransition?
     carouselView.reloadData()
     carouselView.type = .linear
     carouselView.currentItemIndex = carouselView.numberOfItems / 2
-    self.showHey()
+    //self.showHey()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -160,8 +160,8 @@ extension ViewController: iCarouselDataSource {
         itemView.addSubview(funfactsView!)
     }
     itemView.layer.cornerRadius = 5
-    itemView.layer.shadowColor = UIColor.gray.cgColor
-    itemView.layer.shadowOpacity = 50
+    itemView.layer.shadowColor = UIColor.darkGray.cgColor
+    itemView.layer.shadowOpacity = 1
     itemView.layer.shadowOffset = CGSize.zero
     itemView.layer.shadowRadius = 5
     return itemView
@@ -211,7 +211,9 @@ extension ViewController: iCarouselDelegate {
   }
   
   func carouselCurrentItemIndexDidChange(_ carousel: iCarousel!) {
-    view.backgroundColor = colors[carousel.currentItemIndex]
+    UIView.animate(withDuration: 0.5) {
+        self.view.backgroundColor = self.colors[carousel.currentItemIndex]
+    }
   }
 }
 
@@ -226,7 +228,7 @@ extension ViewController: FSCalendarDelegate {
     if (validatedPillDates.contains(date)) {
       cell.shapeLayer.fillColor = UIColor(red: 86/255, green: 205/255, blue: 113/255, alpha: 1).cgColor
     } else if (menstruationDates.contains(date)) {
-      cell.shapeLayer.fillColor = UIColor.red.cgColor
+      cell.shapeLayer.fillColor = UIColor(red: 40/255, green: 3/255, blue: 3/255, alpha: 1).cgColor
     }
   }
 }
