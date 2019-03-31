@@ -50,7 +50,7 @@ class PanicModeViewController: UIViewController {
       let button = UIButton(frame: CGRect(x: 0, y: 0, width: answersStackView.bounds.width, height: answersStackView.bounds.height))
       button.setTitle(answer, for: .normal)
       button.setTitleColor(.white, for: .normal)
-      button.backgroundColor = UIColor(red: 255/255, green: 113/255, blue: 60/255, alpha: 1)
+      button.backgroundColor = answer == "Yes" ? UIColor(red: 86/255, green: 205/255, blue: 113/255, alpha: 1) : UIColor(red: 255/255, green: 113/255, blue: 60/255, alpha: 1)
       button.titleLabel?.font = UIFont(name: "Nunito-Bold", size: 15)
       button.layer.cornerRadius = 8
       button.addTarget(self, action: #selector(answerQuestion(_:)), for: .touchUpInside)
