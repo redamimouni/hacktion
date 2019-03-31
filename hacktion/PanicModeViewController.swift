@@ -36,13 +36,27 @@ class PanicModeViewController: UIViewController {
     tableView.rowHeight = UITableView.automaticDimension
     tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 80))
     
-    answersStackView.isHidden = true
+    hideAnswers()
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
     displayNextChatbotMessages()
+  }
+  
+  private func showAnswers() {
+    answersStackView.alpha = 0
+    UIView.animate(withDuration: 0.2) {
+      self.answersStackView.alpha = 1
+    }
+  }
+  
+  private func hideAnswers() {
+    answersStackView.alpha = 1
+    UIView.animate(withDuration: 0.2) {
+      self.answersStackView.alpha = 0
+    }
   }
   
   private func displayPossibleAnswersForMessage(at index: Int) {
@@ -62,11 +76,11 @@ class PanicModeViewController: UIViewController {
       answersStackView.addArrangedSubview(button)
     }
     
-    answersStackView.isHidden = false
+    showAnswers()
   }
   
   @objc private func answerQuestion(_ sender: UIButton) {
-    answersStackView.isHidden = true
+    hideAnswers()
     guard let answer = sender.titleLabel?.text else {
       return
     }
