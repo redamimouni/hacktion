@@ -131,76 +131,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-mo-TOp">
-                                <rect key="frame" x="25" y="43" width="15" height="22"/>
-                                <state key="normal" image="close"/>
-                                <connections>
-                                    <action selector="close" destination="RtR-ji-Ul5" eventType="touchUpInside" id="sig-6h-Tl7"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panic mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9e-Fh-kZ5">
-                                <rect key="frame" x="133" y="40" width="109.5" height="27.5"/>
-                                <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito ExtraBold" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.44313725490196076" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="No5-9c-cYQ">
-                                <rect key="frame" x="0.0" y="102.5" width="375" height="564.5"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pa6-K1-m3M">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-mo-TOp">
+                                        <rect key="frame" x="17" y="13" width="55" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="close" destination="RtR-ji-Ul5" eventType="touchUpInside" id="sig-6h-Tl7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Panic mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9e-Fh-kZ5">
+                                        <rect key="frame" x="132" y="17" width="109.5" height="27.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito ExtraBold" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.44313725490196076" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="No5-9c-cYQ">
+                                        <rect key="frame" x="0.0" y="95" width="375" height="507"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyMessageTableViewCell" id="DXg-75-zMg" customClass="MyMessageTableViewCell" customModule="Pilyumi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXg-75-zMg" id="dHG-7K-TSV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChatbotMessageTableViewCell" id="PoV-4P-dcT" customClass="ChatbotMessageTableViewCell" customModule="Pilyumi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PoV-4P-dcT" id="uMP-m3-ngL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LocationMessageTableViewCell" id="JwS-69-U3t" customClass="LocationMessageTableViewCell" customModule="Pilyumi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JwS-69-U3t" id="dYL-6J-vqF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="RtR-ji-Ul5" id="RuI-wh-qyO"/>
+                                            <outlet property="delegate" destination="RtR-ji-Ul5" id="zuz-nf-xUJ"/>
+                                        </connections>
+                                    </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-Qr-RMd">
+                                        <rect key="frame" x="25" y="549" width="325" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyMessageTableViewCell" id="DXg-75-zMg" customClass="MyMessageTableViewCell" customModule="Pilyumi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXg-75-zMg" id="dHG-7K-TSV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChatbotMessageTableViewCell" id="PoV-4P-dcT" customClass="ChatbotMessageTableViewCell" customModule="Pilyumi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PoV-4P-dcT" id="uMP-m3-ngL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LocationMessageTableViewCell" id="JwS-69-U3t" customClass="LocationMessageTableViewCell" customModule="Pilyumi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JwS-69-U3t" id="dYL-6J-vqF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="RtR-ji-Ul5" id="RuI-wh-qyO"/>
-                                    <outlet property="delegate" destination="RtR-ji-Ul5" id="zuz-nf-xUJ"/>
-                                </connections>
-                            </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KZI-Qr-RMd">
-                                <rect key="frame" x="25" y="603" width="325" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8vs-EB-bCR"/>
-                                </constraints>
-                            </stackView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="No5-9c-cYQ" firstAttribute="top" secondItem="x9e-Fh-kZ5" secondAttribute="bottom" constant="35" id="6fh-b6-kUa"/>
-                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x9e-Fh-kZ5" secondAttribute="trailing" constant="25" id="7dq-DF-IDI"/>
-                            <constraint firstItem="No5-9c-cYQ" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" id="FM8-Ht-E3m"/>
-                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="bottom" secondItem="KZI-Qr-RMd" secondAttribute="bottom" constant="20" id="G4u-hl-tXb"/>
-                            <constraint firstItem="JDo-mo-TOp" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" constant="25" id="O3j-VV-zFw"/>
-                            <constraint firstItem="x9e-Fh-kZ5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JDo-mo-TOp" secondAttribute="trailing" constant="25" id="QkX-qW-aRf"/>
-                            <constraint firstItem="KZI-Qr-RMd" firstAttribute="leading" secondItem="Suy-xf-CbJ" secondAttribute="leading" constant="25" id="V7H-jj-p4h"/>
-                            <constraint firstItem="x9e-Fh-kZ5" firstAttribute="top" secondItem="Suy-xf-CbJ" secondAttribute="top" constant="20" id="Xgh-fs-OfX"/>
-                            <constraint firstItem="x9e-Fh-kZ5" firstAttribute="centerX" secondItem="Suy-xf-CbJ" secondAttribute="centerX" id="alO-ae-CtW"/>
-                            <constraint firstItem="JDo-mo-TOp" firstAttribute="centerY" secondItem="x9e-Fh-kZ5" secondAttribute="centerY" id="euE-CY-nGE"/>
-                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="bottom" secondItem="No5-9c-cYQ" secondAttribute="bottom" id="fJb-b4-QBJ"/>
-                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" secondItem="KZI-Qr-RMd" secondAttribute="trailing" constant="25" id="gvJ-Gc-Xqf"/>
-                            <constraint firstItem="Suy-xf-CbJ" firstAttribute="trailing" secondItem="No5-9c-cYQ" secondAttribute="trailing" id="zm9-cg-ihu"/>
-                        </constraints>
+                        <color key="backgroundColor" red="1" green="0.4431372549" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Suy-xf-CbJ"/>
                     </view>
                     <connections>
@@ -210,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLu-hJ-p4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="134"/>
+            <point key="canvasLocation" x="1568.8" y="133.5832083958021"/>
         </scene>
         <!--Card Detail View Controller-->
         <scene sceneID="phX-pc-Av9">
