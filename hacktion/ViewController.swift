@@ -36,8 +36,6 @@ private var transition: CardTransition?
     dateFormatter.date(from: "2019-03-05")!,
     dateFormatter.date(from: "2019-03-06")!,
     dateFormatter.date(from: "2019-03-07")!,
-    dateFormatter.date(from: "2019-03-08")!,
-    dateFormatter.date(from: "2019-03-09")!,
     dateFormatter.date(from: "2019-03-15")!,
     dateFormatter.date(from: "2019-03-16")!,
     dateFormatter.date(from: "2019-03-17")!,
@@ -56,6 +54,8 @@ private var transition: CardTransition?
     dateFormatter.date(from: "2019-03-30")!
   ]
   private let menstruationDates: [Date] = [
+    dateFormatter.date(from: "2019-03-08")!,
+    dateFormatter.date(from: "2019-03-09")!,
     dateFormatter.date(from: "2019-03-10")!,
     dateFormatter.date(from: "2019-03-11")!,
     dateFormatter.date(from: "2019-03-12")!,
@@ -83,6 +83,7 @@ private var transition: CardTransition?
     carouselView.reloadData()
     carouselView.type = .linear
     carouselView.currentItemIndex = carouselView.numberOfItems / 2
+    self.showHey()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -149,20 +150,20 @@ extension ViewController: iCarouselDataSource {
         moodView?.initViews()
         itemView.addSubview(moodView!)
     } else if index == 0 {
-        let streakView = Bundle.main.loadNibNamed("Streak", owner: self, options: nil)?.first as? BaseView
+        let streakView = Bundle.main.loadNibNamed("Streak", owner: self, options: nil)?.first as? Streak
+        streakView?.addTapGestureRecognizer(action: {
+            self.animate(view: streakView!)
+        })
         itemView.addSubview(streakView!)
     } else if index == 3 {
         let funfactsView = Bundle.main.loadNibNamed("Funfacts", owner: self, options: nil)?.first as? BaseView
-        funfactsView?.addTapGestureRecognizer(action: {
-            self.animate(view: funfactsView!)
-        })
         itemView.addSubview(funfactsView!)
     }
     itemView.layer.cornerRadius = 5
-    itemView.layer.shadowColor = UIColor.black.cgColor
-    itemView.layer.shadowOpacity = 10
+    itemView.layer.shadowColor = UIColor.gray.cgColor
+    itemView.layer.shadowOpacity = 50
     itemView.layer.shadowOffset = CGSize.zero
-    itemView.layer.shadowRadius = 1
+    itemView.layer.shadowRadius = 5
     return itemView
   }
     
