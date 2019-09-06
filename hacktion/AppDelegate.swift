@@ -12,7 +12,7 @@ import UserNotifications
   
 @UIApplicationMain
 class AppDelegate: UIResponder,
-UIApplicationDelegate,
+UIApplicationDelegate, 
 UNUserNotificationCenterDelegate,
 MessagingDelegate{
 
