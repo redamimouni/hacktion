@@ -28,7 +28,7 @@ MessagingDelegate{
       UNUserNotificationCenter.current().delegate = self
       
       let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-      UNUserNotificationCenter.current().requestAuthorization(
+      UNUserNotificationCenter.current().requestAuthorization(     
         options: authOptions,
         completionHandler: {_, _ in })
     } else {
