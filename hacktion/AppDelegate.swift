@@ -17,7 +17,7 @@ UNUserNotificationCenterDelegate,
 MessagingDelegate{
 
   var window: UIWindow?
-  var launcheShortCutItem: UIApplicationShortcutItem?
+  var launcheShortCutItem: UIApplicationShortcutItem?    
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
