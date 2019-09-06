@@ -13,7 +13,7 @@ import Lottie
 
 class ViewController: UIViewController {
 
-private var transition: CardTransition?
+private var transition: CardTransition?    
     
   @IBOutlet weak var countdownLabel: UILabel!
   @IBOutlet weak var calendarView: FSCalendar!
