@@ -72,7 +72,7 @@ private var transition: CardTransition?
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+         
     nextPillDate = Date(timeIntervalSinceNow: 5000)
     
     calendarView.appearance.headerTitleFont = UIFont(name: "Nunito-ExtraBold", size: 20)
